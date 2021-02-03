@@ -1,5 +1,5 @@
 # Description
-CUDA implementation of GrabCut (C++/Python). Run the following steps to get it working.
+Implementation of GrabCut with CUDA GMM. Works in C++ and Python. Run the following steps to get it working.
 This code has been tested under the following configuration:
 * Ubuntu 16.04
 * GNU g++ 5.4.0
