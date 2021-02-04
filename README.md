@@ -13,14 +13,7 @@ This code has been tested under the following configuration:
 * Boost >= 1.70.0
 * pyboostcvconverter
 
-# Download code
-```
-git clone git@github.com:luiscarlosgph/grabcut.git
-cd grabcut
-```
-
-# Guide to install **some** of the dependencies
-* Boost 1.75.0
+# Quick guide to install Boost
 ```bash
 wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
 tar xf boost_1_75_0.tar.gz
@@ -36,18 +29,21 @@ sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release 
 sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 ```
 
-* pyboostcvconverter
+# Installing from source
 ```
+# Clone this repo
+git clone git@github.com:luiscarlosgph/grabcut.git
+cd grabcut
+
+# Clone and install pyboostcvconverter
 git submodule update --init
 cd pyboostcvconverter
 mkdir build
 cd build
 cmake -DPYTHON_DESIRED_VERSION=3.X -DBUILD_TEST_PROJECT=ON ..
 make
-```
 
 # Compile GrabCut
-```
 cd ../..
 mkdir build
 cd build
@@ -56,7 +52,7 @@ make
 sudo make install
 ```
 
-# Common errors
+# Common errors and solutions when installing from source
 1. Could NOT find CUDA (missing: CUDA_CUDART_LIBRARY)
 
 Solution: specify cuda directory when compiling GrabCut, e.g.:
@@ -103,4 +99,4 @@ Python: https://www.python.org/dev/peps/pep-0008
 Please comment the C++ code using the Doxygen Javadoc style: http://www.doxygen.nl/manual/docblocks.html
 
 # License
-See [www.google.com](```LICENSE```) file.
+See [https://github.com/luiscarlosgph/grabcut/blob/main/LICENSE](```LICENSE```) file.
