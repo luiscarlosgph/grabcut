@@ -2,23 +2,17 @@
 Implementation of GrabCut with CUDA-based Gaussian Mixture Models. Works in C++ and Python. Run the following steps to get it working.
 This code has been tested under the following configuration:
 * Ubuntu 20.10
-* GNU g++ 9.3.0 
-* Python 3.8.6
+* GNU g++ 9.3.0
 * CMake 3.16.3
+* Python 3.8.6
 
-# Coding style
-Please follow these guidelines when editing the code.  
-C++: https://google.github.io/styleguide/cppguide.html  
-Python: https://www.python.org/dev/peps/pep-0008
 
-# Commenting style
-Please comment the C++ code using the Doxygen Javadoc style: http://www.doxygen.nl/manual/docblocks.html
 
 # Dependencies
-* OpenCV 3.4.3
-* libpython 2.7
-* libboost_python 1.70.0
-* CUDA 8
+* CUDA >= 8.0
+* OpenCV >= 3.4.3
+* Boost >= 1.70.0
+* Numpy >= 1.20.0
 
 # Download code
 ```
@@ -97,7 +91,17 @@ make: *** [all] Error 2
 Solution: Install the right version of OpenCV (3.4.3), then recompile BOTH pyboostcvconverter and GrabCut.
 
 # Run GrabCut on an image
-
 ```
 python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
+
+# Coding style
+Please follow these guidelines when editing the code.  
+C++: https://google.github.io/styleguide/cppguide.html  
+Python: https://www.python.org/dev/peps/pep-0008
+
+# Commenting style
+Please comment the C++ code using the Doxygen Javadoc style: http://www.doxygen.nl/manual/docblocks.html
+
+# License
+See [www.google.com](```LICENSE```) file.
