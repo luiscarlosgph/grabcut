@@ -6,13 +6,12 @@ This code has been tested under the following configuration:
 * CMake 3.16.3
 * Python 3.8.6
 
-
-
 # Dependencies
 * CUDA >= 8.0
 * OpenCV >= 3.4.3
-* Boost >= 1.70.0
 * Numpy >= 1.20.0
+* Boost >= 1.70.0
+* pyboostcvconverter
 
 # Download code
 ```
@@ -20,7 +19,7 @@ git clone git@github.com:luiscarlosgph/grabcut.git
 cd grabcut
 ```
 
-# Install dependencies
+# Guide to install **some** of the dependencies
 * Boost 1.75.0
 ```bash
 wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
@@ -37,7 +36,7 @@ sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release 
 sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 ```
 
-# Compile pyboostcvconverter
+* pyboostcvconverter
 ```
 git submodule update --init
 cd pyboostcvconverter
