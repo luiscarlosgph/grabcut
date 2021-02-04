@@ -1,2 +1,4 @@
 *.o
-build/*
+build
+dist
+grabcut.egg-info
