@@ -1,5 +1,5 @@
 # Description
-Implementation of GrabCut with CUDA GMM. Works in C++ and Python. Run the following steps to get it working.
+Implementation of GrabCut with CUDA-based Gaussian Mixture Models. Works in C++ and Python. Run the following steps to get it working.
 This code has been tested under the following configuration:
 * Ubuntu 16.04
 * GNU g++ 5.4.0
@@ -34,11 +34,11 @@ tar xf boost_1_70_0.tar.gz
 cd boost_1_70_0/
 ./bootstrap.sh 
 
-# If you ony want to install the Python libboost library
+# If you want to install the Python libboost library **only**
 ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release install
 
-# If you want to install all the libboost libraries
+# If you want to install **all** the libboost libraries
 ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 ```
