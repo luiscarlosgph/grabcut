@@ -22,7 +22,7 @@ Please comment the C++ code using the Doxygen Javadoc style: http://www.doxygen.
 
 # Download code
 ```
-git clone git@github.kcl.ac.uk:k1781793/grabcut.git
+git clone git@github.com:luiscarlosgph/grabcut.git
 cd grabcut
 ```
 
