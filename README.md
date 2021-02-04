@@ -27,11 +27,11 @@ cd grabcut
 ```
 
 # Install dependencies
-* Boost 1.70.0
+* Boost 1.75.0
 ```bash
-wget https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.gz
-tar xf boost_1_70_0.tar.gz
-cd boost_1_70_0/
+wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
+tar xf boost_1_75_0.tar.gz
+cd boost_1_75_0/
 ./bootstrap.sh 
 
 # If you want to install the Python libboost library **only**
