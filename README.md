@@ -18,7 +18,7 @@ This code has been tested under the following configuration:
 wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
 tar xf boost_1_75_0.tar.gz
 cd boost_1_75_0/
-./bootstrap.sh 
+./bootstrap.sh --with-python=/usr/bin/python3
 
 # If you want to install the Python libboost library **only**
 ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
