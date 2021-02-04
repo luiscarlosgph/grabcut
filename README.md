@@ -1,10 +1,10 @@
 # Description
 Implementation of GrabCut with CUDA-based Gaussian Mixture Models. Works in C++ and Python. Run the following steps to get it working.
 This code has been tested under the following configuration:
-* Ubuntu 16.04
-* GNU g++ 5.4.0
-* Python 2.7.12
-* CMake 3.1
+* Ubuntu 20.10
+* GNU g++ 9.3.0 
+* Python 3.8.6
+* CMake 3.16.3
 
 # Coding style
 Please follow these guidelines when editing the code.  
@@ -49,7 +49,7 @@ git submodule update --init
 cd pyboostcvconverter
 mkdir build
 cd build
-cmake -DPYTHON_DESIRED_VERSION=2.X -DBUILD_TEST_PROJECT=ON ..
+cmake -DPYTHON_DESIRED_VERSION=3.X -DBUILD_TEST_PROJECT=ON ..
 make
 ```
 
