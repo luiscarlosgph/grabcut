@@ -4,10 +4,7 @@
  * This code is derived work from the GrabCut sample of the CUDA Toolkit 7.0 samples.
  * This derived work by Luis C. Garcia Peraza Herrera is provided under the MIT license. 
  * 
- * The LICENSE of the original work (NVIDIA CUDA Toolkit 7.0 samples) allows 
- * for modification and redistribution, provided that the full license and 
- * copyright notice are retained. Hence, we have copied here the full 
- * NVIDIA Toolkit samples license:
+ * The full LICENSE of the original work, the NVIDIA CUDA Toolkit 7.0 samples, is copied here:
  *
  * Copyright (c) 2019, NVIDIA CORPORATION. All rights reserved.
  * 
