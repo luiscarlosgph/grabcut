@@ -7,23 +7,23 @@ This code has been tested under the following configuration:
 * Python 3.8.6
 
 # Dependencies
-* CUDA >= 8.0 (last tested to be working 11.0.2)
+* [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
       # Ubuntu/Debian
       $ sudo apt update
       $ sudo apt install nvidia-cuda-toolkit
       
-* OpenCV >= 3.4.3 (last tested to be working 4.5.1)
+* [OpenCV](https://github.com/opencv/opencv) >= 3.4.3 (last tested to be working 4.5.1)
       
       # Ubuntu/Debian
       $ sudo apt update
       $ sudo apt install libopencv-dev python3-opencv
       
-* Numpy >= 1.20.0
+* [Numpy](https://pypi.org/project/numpy/) >= 1.20.0
 
       $ python3 -m pip install numpy --user
 
-* Boost >= 1.70.0 (last tested to be working 1.75.0)
+* [Boost](https://www.boost.org/users/download/) >= 1.70.0 (last tested to be working 1.75.0)
 
       # Ubuntu/Debian
       $ sudo apt-get install libboost-all-dev
