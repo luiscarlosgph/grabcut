@@ -5,7 +5,7 @@
  * This derived work is provided under the MIT license. 
  * 
  * The full LICENSE of the original work, the NVIDIA CUDA Toolkit 7.0 samples, can be
- * found in the NVIDIA EULA file that comes with this software.
+ * found in the 'NVIDIA EULA.txt' file that comes with this software.
  */
 
 #include <stdio.h>
