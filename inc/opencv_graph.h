@@ -46,8 +46,8 @@
 //
 //M*/
 //
-// @brief This template has been modified to add a wrapper to the OpenCV template that facilitates
-//        its use.
+// @brief This template has been modified to add a wrapper to the OpenCV template 
+//        that facilitates its use. The derived work is provided under the MIT license.
 // @author Luis Carlos Garcia-Peraza Herrera (luiscarlos.gph@gmail.com).
 // @date   10 Sep 2019.
 
