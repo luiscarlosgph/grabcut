@@ -30,7 +30,7 @@ This code has been tested under the following configuration:
 
 # Quick guide to install Boost from source
 If you want to install a particular version of Boost instead of the one in the 
-official Ubuntu/Debian repositories you can proceed as follows:
+official Ubuntu/Debian repositories (as shown above) you can proceed as follows:
 ```bash
 wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
 tar xf boost_1_75_0.tar.gz
