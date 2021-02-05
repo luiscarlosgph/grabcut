@@ -8,7 +8,7 @@
  * is strictly prohibited.
  *
  * This code is a modification of the GrabcutUtil.cu coming from the CUDA 7
- * toolkit by:
+ * toolkit provided under the MIT license by:
  *
  * @author Luis Carlos Garcia Peraza Herrera (luiscarlos.gph@gmail.com).
  * @date   28 August 2019.
