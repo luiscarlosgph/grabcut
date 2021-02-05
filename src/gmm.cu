@@ -6,8 +6,8 @@
  * 
  * The LICENSE of the original work (NVIDIA CUDA Toolkit 7.0 samples) allows 
  * for modification and redistribution, provided that the full license and 
- * copyright notice are retained. Hence, we copy have copied here the full 
- * NVIDIA Toolkit samples LICENSE:
+ * copyright notice are retained. Hence, we have copied here the full 
+ * NVIDIA Toolkit samples license:
  *
  * Copyright (c) 2019, NVIDIA CORPORATION. All rights reserved.
  * 
