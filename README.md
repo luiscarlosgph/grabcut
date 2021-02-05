@@ -8,19 +8,29 @@ This code has been tested under the following configuration:
 
 # Dependencies
 * CUDA >= 8.0 (last tested to be working 11.0.2)
+      
+      # Ubuntu/Debian
+      $ sudo apt update
+      $ sudo apt install nvidia-cuda-toolkit
+      
 * OpenCV >= 3.4.3 (last tested to be working 4.5.1)
       
       # Ubuntu/Debian
-      sudo apt update
-      sudo apt install libopencv-dev python3-opencv
+      $ sudo apt update
+      $ sudo apt install libopencv-dev python3-opencv
       
 * Numpy >= 1.20.0
 
-      python3 -m pip install numpy --user
+      $ python3 -m pip install numpy --user
 
 * Boost >= 1.70.0 (last tested to be working 1.75.0)
 
-# Quick guide to install Boost
+      # Ubuntu/Debian
+      $ sudo apt-get install libboost-all-dev
+
+# Quick guide to install Boost from source
+If you want to install a particular version of Boost, instead of installing
+Boost from the Ubuntu/Debian repositories you can proceed as follows:
 ```bash
 wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
 tar xf boost_1_75_0.tar.gz
