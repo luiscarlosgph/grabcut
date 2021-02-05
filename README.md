@@ -10,7 +10,9 @@ This code has been tested under the following configuration:
 * CUDA >= 8.0 (last tested to be working 11.0.2)
 * OpenCV >= 3.4.3 (last tested to be working 4.5.1)
 * Numpy >= 1.20.0
-```python3 -m pip install numpy```
+
+      ```python3 -m pip install numpy```
+
 * Boost >= 1.70.0 (last tested to be working 1.75.0)
 
 # Quick guide to install Boost
