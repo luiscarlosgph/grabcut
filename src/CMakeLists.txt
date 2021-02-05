@@ -6,11 +6,10 @@ target_link_libraries(grabcut
   opencv_imgproc 
   opencv_imgcodecs 
   nppc 
-  python2.7 
-  ${BOOST_PYTHON_LIB_DIR}/libboost_python27.a 
+  ${Boost_LIBRARIES}
+  ${Python3_LIBRARIES}
   ${CMAKE_SOURCE_DIR}/pyboostcvconverter/build/libstatic_pbcvt.a
 )
-#set_target_properties(grabcut PROPERTIES PREFIX "")
 
 # GMM binary
 cuda_add_executable(MainGMM main_gmm.cpp gmm.cu util.cu)
@@ -30,14 +29,16 @@ target_link_libraries(MainGrabcut
   opencv_imgproc 
   opencv_imgcodecs 
   nppc 
-  python2.7 
-  ${BOOST_PYTHON_LIB_DIR}/libboost_python27.a 
+  ${Boost_LIBRARIES}
+  ${Python3_LIBRARIES}
   ${CMAKE_SOURCE_DIR}/pyboostcvconverter/build/libstatic_pbcvt.a
 )
 
-# libgrabcut.so installation configuration
-install(TARGETS grabcut LIBRARY DESTINATION lib) 
+# Install libgrabcut.so (by default in /usr/local/lib)
+install(TARGETS grabcut LIBRARY DESTINATION lib)
+
+# Create dynamic link inside the folder of Python packages so that the library can be imported
 install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink 
-  ${SHARED_LIB_PATH} 
-  ${SHARED_LIB_LINK}
+${CMAKE_INSTALL_PREFIX}/lib/libgrabcut.so
+${Python3_SITELIB}/grabcut.so
 )")

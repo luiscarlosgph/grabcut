@@ -21,6 +21,7 @@
 
 #define INF (255.0f * 255.0f * 3 * 8 + 1)
 #define _FIXED(x) rintf(1e1f * (x))
+#define FULL_MASK 0xffffffff
 
 struct _GMM_t {
   float det;
@@ -177,7 +178,7 @@ __global__ void GMMReductionKernel(int gmm_idx, float *gmm, int gmm_pitch, const
 
     tile_gmms[blockIdx.y * gridDim.x + blockIdx.x] = gmm_flags_bvec;
 #else
-    tile_gmms[blockIdx.y * gridDim.x + blockIdx.x] = __ballot(gmm_flags[threadIdx.x] > 0);
+    tile_gmms[blockIdx.y * gridDim.x + blockIdx.x] = __ballot_sync(FULL_MASK, gmm_flags[threadIdx.x] > 0);
 #endif
   }
 
