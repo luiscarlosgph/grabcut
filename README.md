@@ -10,6 +10,7 @@ This code has been tested under the following configuration:
 * CUDA >= 8.0 (last tested to be working 11.0.2)
 * OpenCV >= 3.4.3 (last tested to be working 4.5.1)
       
+      # Ubuntu/Debian
       sudo apt update
       sudo apt install libopencv-dev python3-opencv
       
