@@ -32,41 +32,41 @@ This code has been tested under the following configuration:
 If do not want to install Boost from the official Ubuntu/Debian repositories as shown above, 
 you may install a particular version from source as follows:
 ```bash
-wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
-tar xf boost_1_75_0.tar.gz
-cd boost_1_75_0/
-./bootstrap.sh --with-python=/usr/bin/python3
+$ wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
+$ tar xf boost_1_75_0.tar.gz
+$ cd boost_1_75_0/
+$ ./bootstrap.sh --with-python=/usr/bin/python3
 
 # If you want to install the Python libboost library **only**
-./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
-sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release install
+$ ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
+$ sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release install
 
 # If you want to install **all** the libboost libraries
-./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
-sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
+$ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
+$ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 ```
 
 # Installing GrabCut from this repository
 ```
 # Clone this repo
-git clone git@github.com:luiscarlosgph/grabcut.git
-cd grabcut
+$ git clone git@github.com:luiscarlosgph/grabcut.git
+$ cd grabcut
 
 # Clone and install pyboostcvconverter
-git submodule update --init
-cd pyboostcvconverter
-mkdir build
-cd build
-cmake -DPYTHON_DESIRED_VERSION=3.X -DBUILD_TEST_PROJECT=ON ..
-make
+$ git submodule update --init
+$ cd pyboostcvconverter
+$ mkdir build
+$ cd build
+$ cmake -DPYTHON_DESIRED_VERSION=3.X -DBUILD_TEST_PROJECT=ON ..
+$ make
 
 # Compile GrabCut
-cd ../..
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make
-sudo make install
+$ cd ../..
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
 ```
 
 # Common errors when installing from source
@@ -74,14 +74,14 @@ sudo make install
 
 Solution: specify cuda directory when compiling GrabCut, e.g.:
 ```bash
-cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_TOOLKIT_ROOT_DIR=[YOUR CUDA VERSION]..
+$ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_TOOLKIT_ROOT_DIR=[YOUR CUDA VERSION]..
 ```
 
 2. fatal error: numpy/ndarrayobject.h: No such file or directory
 
 Solution: the compiler cannot find the path your python packages are installed. Add the locations to CPATH, e.g.:
 ```bash
-export CPATH=[YOUR HOME DIRECTORY]/.local/lib/python2.7/site-packages/numpy/core/include:$CPATH
+$ export CPATH=[YOUR HOME DIRECTORY]/.local/lib/python2.7/site-packages/numpy/core/include:$CPATH
 ```
 
 3. If you find the following error:
@@ -104,7 +104,7 @@ Solution: Try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** 
 
 # Run GrabCut on an image
 ```
-python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
+$ python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
 
 # Coding style
