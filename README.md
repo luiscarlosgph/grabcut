@@ -46,7 +46,7 @@ sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release 
 sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 ```
 
-# Installing from source
+# Installing GrabCut from this repository
 ```
 # Clone this repo
 git clone git@github.com:luiscarlosgph/grabcut.git
