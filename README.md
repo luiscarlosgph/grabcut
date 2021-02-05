@@ -100,7 +100,7 @@ Makefile:129: recipe for target 'all' failed
 make: *** [all] Error 2
 ```
 
-Solution: Install the right version of OpenCV (3.4.3), then recompile BOTH pyboostcvconverter and GrabCut.
+Solution: Try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** pyboostcvconverter and GrabCut.
 
 # Run GrabCut on an image
 ```
