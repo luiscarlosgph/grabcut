@@ -116,4 +116,4 @@ Python: https://www.python.org/dev/peps/pep-0008
 Please comment the C++ code using the Doxygen Javadoc style: http://www.doxygen.nl/manual/docblocks.html
 
 # License
-See [https://github.com/luiscarlosgph/grabcut/blob/main/LICENSE](```LICENSE```) file.
+See the [LICENSE](https://github.com/luiscarlosgph/grabcut/blob/main/LICENSE) file.
