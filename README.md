@@ -51,7 +51,7 @@ make
 sudo make install
 ```
 
-# Common errors and solutions when installing from source
+# Common errors when installing from source
 1. Could NOT find CUDA (missing: CUDA_CUDART_LIBRARY)
 
 Solution: specify cuda directory when compiling GrabCut, e.g.:
