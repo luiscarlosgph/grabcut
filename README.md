@@ -7,6 +7,7 @@ This code has been tested under the following configuration:
 * Python 3.8.6
 
 # Dependencies
+* Python >= 3.8.6
 * [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
       # Ubuntu/Debian
