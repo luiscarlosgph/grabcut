@@ -58,7 +58,7 @@ $ git submodule update --init
 $ cd pyboostcvconverter
 $ mkdir build
 $ cd build
-$ cmake -DPYTHON_DESIRED_VERSION=3.X -DBUILD_TEST_PROJECT=ON ..
+$ cmake -DBUILD_TEST_PROJECT=ON ..
 $ make
 
 # Compile GrabCut
