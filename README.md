@@ -89,7 +89,7 @@ $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_TOOLKIT_ROOT_DIR=[YOUR CUDA VERSION]..
 
 2. fatal error: numpy/ndarrayobject.h: No such file or directory
 
-Solution: the compiler cannot find the path your python packages are installed. Add the locations to CPATH, for example:
+Solution: the compiler cannot find the NumPy headers. Add the locations to CPATH, for example:
 ```bash
 $ export CPATH=[YOUR HOME DIRECTORY]/.local/lib/python3.8/site-packages/numpy/core/include:$CPATH
 ```
