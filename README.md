@@ -119,7 +119,7 @@ Solution: run this
 export CC=/usr/bin/gcc-8
 export CXX=/usr/bin/g++-8
 ```
-before you call ```cmake```. As you are seen this error, you need to delete all the contents of the ```build``` folder before calling ```cmake``` again.
+before you call ```cmake```. As you are seeing this error, you need to delete all the contents of the ```build``` folder before calling ```cmake``` again.
 
 # Coding style
 Please follow these guidelines when editing the code.  
