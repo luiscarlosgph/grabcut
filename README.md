@@ -113,6 +113,7 @@ make: *** [all] Error 2
 Solution: try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** pyboostcvconverter and GrabCut.
 
 4. #error -- unsupported GNU version! gcc versions later than 8 are not supported!
+
 Solution: run this
 ```bash
 export CC=/usr/bin/gcc-8
