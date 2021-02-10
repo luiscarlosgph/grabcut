@@ -7,6 +7,7 @@ This code has been tested under the following configuration:
 * Python 3.8.6
 
 # Dependencies
+* Python >= 3.8.2
 * [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
       # Ubuntu/Debian
@@ -57,7 +58,7 @@ $ git submodule update --init
 $ cd pyboostcvconverter
 $ mkdir build
 $ cd build
-$ cmake -DPYTHON_DESIRED_VERSION=3.X -DBUILD_TEST_PROJECT=ON ..
+$ cmake -DBUILD_TEST_PROJECT=ON ..
 $ make
 
 # Compile GrabCut
