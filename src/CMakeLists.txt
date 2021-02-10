@@ -1,13 +1,14 @@
 # Grabcut library
 cuda_add_library(grabcut SHARED grabcut.cpp gmm.cu util.cu)
 target_link_libraries(grabcut
-  opencv_core 
-  opencv_highgui
-  opencv_imgproc 
-  opencv_imgcodecs 
+  #opencv_core 
+  #opencv_highgui
+  #opencv_imgproc 
+  #opencv_imgcodecs 
   nppc 
-  ${Boost_LIBRARIES}
   ${Python3_LIBRARIES}
+  ${Boost_LIBRARIES}
+  ${OpenCV_LIBS}
   ${CMAKE_SOURCE_DIR}/pyboostcvconverter/build/libstatic_pbcvt.a
 )
 

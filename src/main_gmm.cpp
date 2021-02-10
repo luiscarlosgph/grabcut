@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
 
     cv::Mat rectColor = cv::imread(CommandLineReader::getInstance().getRectFilePath());
     cv::Mat rectGray;
-    cv::cvtColor(rectColor, rectGray, CV_BGR2GRAY);
+    cv::cvtColor(rectColor, rectGray, cv::COLOR_BGR2GRAY);
 #ifndef NDEBUG
     cv::imshow("Rect image loaded from file", rectGray);
     cv::waitKey();
@@ -90,7 +90,7 @@ int main(int argc, char **argv) {
     // The user inputs an image with black background and a trimap
     cv::Mat trimapColor = cv::imread(CommandLineReader::getInstance().getTrimapFilePath());
     cv::Mat trimapGray;
-    cv::cvtColor(trimapColor, trimapGray, CV_BGR2GRAY);
+    cv::cvtColor(trimapColor, trimapGray, cv::COLOR_BGR2GRAY);
 #ifndef NDEBUG
     cv::imshow("Trimap loaded from file", trimapGray);
     cv::waitKey();

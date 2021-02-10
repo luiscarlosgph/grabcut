@@ -60,7 +60,7 @@ int main(int argc, char **argv) {
 
     cv::Mat rectColor = cv::imread(CommandLineReader::getInstance().getRectFilePath());
     cv::Mat rectGray;
-    cv::cvtColor(rectColor, rectGray, CV_BGR2GRAY);
+    cv::cvtColor(rectColor, rectGray, cv::COLOR_BGR2GRAY);
 #ifndef NDEBUG
     cv::imshow("Rect image loaded from file", rectGray);
     cv::waitKey();
