@@ -22,6 +22,8 @@ This code has been tested under the following configuration:
       
 * [Numpy](https://pypi.org/project/numpy/) >= 1.20.0
 
+      $ sudo apt update
+      $ sudo apt install python3-pip
       $ python3 -m pip install numpy --user
 
 * [Boost](https://www.boost.org/users/download/) >= 1.70.0 (last tested to be working 1.75.0)
