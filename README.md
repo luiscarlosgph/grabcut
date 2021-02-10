@@ -52,7 +52,7 @@ $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 # Installing GrabCut from this repository
 ```
 # Clone this repo
-$ git clone git@github.com:luiscarlosgph/grabcut.git
+$ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
 
 # Clone and install pyboostcvconverter
