@@ -70,6 +70,11 @@ $ make
 $ sudo make install
 ```
 
+# Run GrabCut on an image
+```
+$ python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
+```
+
 # Common errors when installing from source
 1. Could NOT find CUDA (missing: CUDA_CUDART_LIBRARY)
 
@@ -102,11 +107,6 @@ make: *** [all] Error 2
 ```
 
 Solution: Try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** pyboostcvconverter and GrabCut.
-
-# Run GrabCut on an image
-```
-$ python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
-```
 
 # Coding style
 Please follow these guidelines when editing the code.  
