@@ -89,9 +89,9 @@ $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_TOOLKIT_ROOT_DIR=[YOUR CUDA VERSION]..
 
 2. fatal error: numpy/ndarrayobject.h: No such file or directory
 
-Solution: the compiler cannot find the path your python packages are installed. Add the locations to CPATH, e.g.:
+Solution: the compiler cannot find the path your python packages are installed. Add the locations to CPATH, for example:
 ```bash
-$ export CPATH=[YOUR HOME DIRECTORY]/.local/lib/python2.7/site-packages/numpy/core/include:$CPATH
+$ export CPATH=[YOUR HOME DIRECTORY]/.local/lib/python3.8/site-packages/numpy/core/include:$CPATH
 ```
 
 3. If you find the following error:
@@ -110,7 +110,15 @@ Makefile:129: recipe for target 'all' failed
 make: *** [all] Error 2
 ```
 
-Solution: Try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** pyboostcvconverter and GrabCut.
+Solution: try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** pyboostcvconverter and GrabCut.
+
+4. #error -- unsupported GNU version! gcc versions later than 8 are not supported!
+Solution: run this
+```bash
+export CC=/usr/bin/gcc-8
+export CXX=/usr/bin/g++-8
+```
+before you call ```cmake```. As you are seen this error, you need to delete all the contents of the ```build``` folder before calling ```cmake``` again.
 
 # Coding style
 Please follow these guidelines when editing the code.  
