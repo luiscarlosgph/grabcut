@@ -114,7 +114,7 @@ Solution: try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** 
 
 4. #error -- unsupported GNU version! gcc versions later than 8 are not supported!
 
-Solution: run this
+Solution: choose your compiler running
 ```bash
 export CC=/usr/bin/gcc-8
 export CXX=/usr/bin/g++-8
