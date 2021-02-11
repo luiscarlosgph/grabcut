@@ -75,12 +75,15 @@ $ sudo make install
 
 Run GrabCut on an image
 -----------------------
+This commands are supposed to be executed from the root of the repository. 
 * Using Python
-```
+```bash
 $ python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
 * Using C++
-TODO
+```
+$ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
+```
 
 Common errors when installing from source
 -----------------------------------------
