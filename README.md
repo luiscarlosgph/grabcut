@@ -76,8 +76,6 @@ $ sudo make install
 Run GrabCut on an image
 -----------------------
 This commands are supposed to be executed from the root of the repository.
-* Using a **rect** as a scribble:
-TODO
 
 * Using a **trimap** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
 
@@ -102,6 +100,17 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x
     </td>
     <td align="center">
       <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_trimap_iter_5_gamma_10.png?raw=true" width=205>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/tool_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_v2_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_trimap_v2_iter_5_gamma_10.png?raw=true" width=205>
     </td>
   </tr>
 </table>
