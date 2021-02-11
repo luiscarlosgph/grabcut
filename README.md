@@ -168,33 +168,26 @@ Minimal code snippets using the library
   * Trimap: [minimal_trimap_snippet.py](https://github.com/luiscarlosgph/grabcut/blob/main/snippets/minimal_trimap_snippet.py)
   
   ```python
-  #!/usr/lib/python
-#
-# @brief Minimal code snippet to show GrabCut segmentation with a trimap.
-#
-# @author Luis C. Garcia Peraza Herrera (luiscarlos.gph@gmail.com).
-# @date   11 Feb 2021.
+  import cv2
+  import grabcut
 
-import cv2
-import grabcut
+  image_path = 'data/tool_512x409.png' 
+  trimap_path = 'data/trimap_512x409.png'
+  output_path = 'output_512x409_trimap_iter_5_gamma_10.png'
+  max_iter = 5
+  gamma = 10.
 
-image_path = 'data/tool_512x409.png' 
-trimap_path = 'data/trimap_512x409.png'
-output_path = 'output_512x409_trimap_iter_5_gamma_10.png'
-max_iter = 5
-gamma = 10.
+  # Read image and trimap
+  im = cv2.imread(image_path)
+  im_rgba = cv2.cvtColor(im, cv2.COLOR_BGR2BGRA)
+  trimap = cv2.imread(trimap_path, cv2.IMREAD_GRAYSCALE)
 
-# Read image and trimap
-im = cv2.imread(image_path)
-im_rgba = cv2.cvtColor(im, cv2.COLOR_BGR2BGRA)
-trimap = cv2.imread(trimap_path, cv2.IMREAD_GRAYSCALE)
+  # Perform segmentation
+  gc = grabcut.GrabCut(max_iter)
+  segmentation = gc.estimateSegmentationFromTrimap(im_rgba, trimap, gamma)
 
-# Perform segmentation
-gc = grabcut.GrabCut(max_iter)
-segmentation = gc.estimateSegmentationFromTrimap(im_rgba, trimap, gamma)
-
-# Save segmentation
-cv2.imwrite(output_path, segmentation)
+  # Save segmentation
+  cv2.imwrite(output_path, segmentation)
   ```
   
   * Fourmap: [minimal_fourmap_snippet.py](https://github.com/luiscarlosgph/grabcut/blob/main/snippets/minimal_fourmap_snippet.py)
