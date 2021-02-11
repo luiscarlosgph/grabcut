@@ -59,13 +59,10 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
-# Installing GrabCut from this repository
+# Compile and install GrabCut from source
 ```
-# Clone this repo
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
-
-# Compile GrabCut
 $ mkdir build
 $ cd build
 $ cmake -DCMAKE_BUILD_TYPE=Release ..
