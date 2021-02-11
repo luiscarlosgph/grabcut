@@ -73,12 +73,17 @@ $ make
 $ sudo make install
 ```
 
-# Run GrabCut on an image
+Run GrabCut on an image
+-----------------------
+* Using Python
 ```
 $ python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
+* Using C++
+TODO
 
-# Common errors when installing from source
+Common errors when installing from source
+-----------------------------------------
 1. Could NOT find CUDA (missing: CUDA_CUDART_LIBRARY)
 
 Solution: specify cuda directory when compiling GrabCut, e.g.:
@@ -120,13 +125,16 @@ export CXX=/usr/bin/g++-8
 ```
 before you call ```cmake```. As you are seeing this error, you need to delete all the contents of the ```build``` folder before calling ```cmake``` again.
 
-# Coding style
+Coding style
+--------------
 Please follow these guidelines when editing the code.  
 C++: https://google.github.io/styleguide/cppguide.html  
 Python: https://www.python.org/dev/peps/pep-0008
 
-# Commenting style
+Commenting style
+------------------
 Please comment the C++ code using the Doxygen Javadoc style: http://www.doxygen.nl/manual/docblocks.html
 
-# License
+License
+---------
 This project is distributed under an MIT license. See the [LICENSE](https://github.com/luiscarlosgph/grabcut/blob/main/LICENSE) file.
