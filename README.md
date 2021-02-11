@@ -65,16 +65,7 @@ $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
 
-# Clone and install pyboostcvconverter
-$ git submodule update --init
-$ cd pyboostcvconverter
-$ mkdir build
-$ cd build
-$ cmake -DBUILD_TEST_PROJECT=ON ..
-$ make
-
 # Compile GrabCut
-$ cd ../..
 $ mkdir build
 $ cd build
 $ cmake -DCMAKE_BUILD_TYPE=Release ..
