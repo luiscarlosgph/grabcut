@@ -26,13 +26,13 @@ class CommandLineReader {
       "\nBinary Gaussian Mixture Model segmentation.\n"
       "\nExamples of valid execution:\n"
       "   $ ./main --help\n"
-      "   $ ./main --input tool.png --output output.png --niter 5 --rect "
+      "   $ ./main --input tool.png --output output.png --iter 5 --rect "
       "tool_rect.png\n"
-      "   $ ./main --input tool.png --output output.png --niter 5 --fourmap "
+      "   $ ./main --input tool.png --output output.png --iter 5 --fourmap "
       "tool_fourmap.png\n"
-      "   $ ./main --input tool.png --output output.png --niter 5 --trimap "
+      "   $ ./main --input tool.png --output output.png --iter 5 --trimap "
       "tool_trimap.png --probaout probaout.png\n"
-      "   $ ./main --input tool.png --output output.png --niter 5 --trimap "
+      "   $ ./main --input tool.png --output output.png --iter 5 --trimap "
       "tool_trimap.png\n";
 
   // Singleton: only one command line
@@ -71,7 +71,7 @@ class CommandLineReader {
         "y,bgmap", "Foreground probability map, the range [0, 255] will be mapped to [0, 1].",
         cxxopts::value<std::string>())("g,gamma", "GrabCut gamma. A typical value is 50.0.",
                                        cxxopts::value<double>())(
-        "n,niter", "Maximum number of iterations to execute learning.", cxxopts::value<int>());
+        "n,iter", "Maximum number of iterations to execute learning.", cxxopts::value<int>());
 
     // Parse command line options
     auto result = options.parse(argc, argv);
@@ -98,7 +98,7 @@ class CommandLineReader {
     }
 
     // Optional parameters
-    if (result.count("niter")) m_iter = result["niter"].as<int>();
+    if (result.count("iter")) m_iter = result["iter"].as<int>();
     if (result.count("gamma")) m_gamma = result["gamma"].as<double>();
     if (result.count("rect")) m_rectPath = result["rect"].as<std::string>();
     if (result.count("trimap")) m_trimapPath = result["trimap"].as<std::string>();
