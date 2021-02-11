@@ -81,7 +81,7 @@ This commands are supposed to be executed from the root of the repository.
 $ python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
 * Using C++
-```
+```bash
 $ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
 
