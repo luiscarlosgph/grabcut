@@ -161,9 +161,10 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_51
 
 As for the trimap, not all the labels must be specified in a fourmap. However, at least a foreground pixel (probable or sure) and a background pixel (probable or sure) must be present.
 
-Exemplary code snippets
------------------------
-TODO
+Minimal code snippets
+---------------------
+* Python:
+      - Trimap: [minimal_trimap_snippet.py](https://github.com/luiscarlosgph/grabcut/blob/main/snippets/minimal_trimap_snippet.py)
 
 Common errors when installing from source
 -----------------------------------------
