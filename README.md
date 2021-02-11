@@ -7,7 +7,8 @@ This code has been tested under the following configuration:
 * CMake 3.16.3
 * Python 3.8.6
 
-# Install dependencies
+Install dependencies
+--------------------
 * Python >= 3.8.2
 * [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
@@ -60,7 +61,8 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
-# Compile and install GrabCut from source
+Compile and install GrabCut from source
+---------------------------------------
 ```
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
