@@ -105,9 +105,23 @@ $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap
 $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
 
-
-
 * Using a **fourmap** (0 = sure background, 64 = probably background, 128 = probably foreground, 255 = sure foreground) as a scribble:
+<table align="center">
+  <tr>
+    <td align="center">Image</td> <td align="center">Trimap</td> <td align="center">Output</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/tool_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/fourmap_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_fourmap_iter_5_gamma_10.png?raw=true" width=205>
+    </td>
+  </tr>
+</table>
 ```bash
 # Python
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
