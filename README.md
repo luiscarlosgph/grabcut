@@ -82,6 +82,7 @@ These commands are supposed to be executed from the root of the repository.
 ```bash
 # Python
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
+# Time elapsed in GrabCut segmentation: 169 milliseconds
 
 # C++
 $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
