@@ -13,9 +13,9 @@
 int main(int argc, char **argv) {
   const std::string imagePath = "data/tool_512x409.png"; 
   const std::string trimapPath = "data/trimap_512x409.png";
-  const std::string outputPath = "data/output_512x409_trimap_iter_5_gamma_10.png"
-  int maxIter = 5
-  float gamma = 10.
+  const std::string outputPath = "data/output_512x409_trimap_iter_5_gamma_10.png";
+  int maxIter = 5;
+  float gamma = 10.;
 
   // Read image and trimap
   cv::Mat im = cv::imread(imagePath);
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 
   // Perform segmentation
   GrabCut gc(maxIter);
-  segmentation = grabcut.estimateSegmentationFromTrimap(imBgra, trimap, gamma);
+  cv::Mat segmentation = gc.estimateSegmentationFromTrimap(imBgra, trimap, gamma);
 
   // Save segmentation
   cv::imwrite(outputPath, segmentation);
