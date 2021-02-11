@@ -1,6 +1,6 @@
 #!/usr/lib/python
 #
-# @brief Minimal code snippet to show GrabCut segmentation with a trimap.
+# @brief Minimal code snippet to show GrabCut segmentation with a fourmap.
 #
 # @author Luis C. Garcia Peraza Herrera (luiscarlos.gph@gmail.com).
 # @date   11 Feb 2021.
