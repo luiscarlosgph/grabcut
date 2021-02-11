@@ -191,29 +191,6 @@ Minimal code snippets using the library
   ```
   
   * Fourmap: [minimal_fourmap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/minimal_fourmap_snippet.py)
-  
-  ```python
-  import cv2
-  import grabcut
-
-  image_path = 'data/tool_512x409.png' 
-  fourmap_path = 'data/fourmap_512x409.png'
-  output_path = 'output_512x409_fourmap_iter_5_gamma_10.png'
-  max_iter = 5
-  gamma = 10.
-
-  # Read image and trimap
-  im = cv2.imread(image_path)
-  im_rgba = cv2.cvtColor(im, cv2.COLOR_BGR2BGRA)
-  fourmap = cv2.imread(fourmap_path, cv2.IMREAD_GRAYSCALE)
-
-  # Perform segmentation
-  gc = grabcut.GrabCut(max_iter)
-  segmentation = gc.estimateSegmentationFromFourmap(im_rgba, fourmap, gamma)
-
-  # Save segmentation
-  cv2.imwrite(output_path, segmentation)
-  ```
 
 * C++:
   
