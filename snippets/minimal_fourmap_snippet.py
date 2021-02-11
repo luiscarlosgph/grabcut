@@ -10,7 +10,7 @@ import grabcut
 
 image_path = 'data/tool_512x409.png' 
 fourmap_path = 'data/fourmap_512x409.png'
-output_path = 'output_512x409_fourmap_iter_5_gamma_10.png'
+output_path = 'data/output_512x409_fourmap_iter_5_gamma_10.png'
 max_iter = 5
 gamma = 10.
 
