@@ -79,7 +79,7 @@ This commands are supposed to be executed from the root of the repository.
 * Using a **rect** as a scribble:
 TODO
 
-* Using a **trimap** as a scribble:
+* Using a **trimap** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
 ```bash
 # Python
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
@@ -88,7 +88,7 @@ $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap
 $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
 
-* Using a **fourmap** as a scribble:
+* Using a **fourmap** (0 = sure background, 64 = probably background, 128 = probably foreground, 255 = sure foreground) as a scribble:
 ```bash
 # Python
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
