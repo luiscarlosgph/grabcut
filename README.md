@@ -75,13 +75,19 @@ $ sudo make install
 
 Run GrabCut on an image
 -----------------------
-This commands are supposed to be executed from the root of the repository. 
-* Using Python
+This commands are supposed to be executed from the root of the repository.
+* Using a **rect** as a scribble:
+TODO
+
+* Using a **trimap** as a scribble:
+TODO
+
+* Using a **fourmap** as a scribble:
 ```bash
+# Python
 $ python src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
-```
-* Using C++
-```bash
+
+# C++
 $ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
 
