@@ -82,6 +82,7 @@ These commands are supposed to be executed from the root of the repository.
 ```bash
 # Python
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
+# Time elapsed in GrabCut segmentation: 169 milliseconds
 
 # C++
 $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
@@ -102,6 +103,7 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x
       <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_trimap_iter_5_gamma_10.png?raw=true" width=205>
     </td>
   </tr>
+  <!--    
   <tr>
     <td align="center">
       <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/tool_512x409.png?raw=true" width=205>
@@ -124,9 +126,10 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x
       <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_trimap_v3_iter_5_gamma_10.png?raw=true" width=205>
     </td>
   </tr>
+  -->
 </table>
 
-It is not mandatory to provide sure foreground and sure background for a trimap, either of the two is sufficient. However, as shown above, performance may vary significantly when specifying just one of them.
+It is not mandatory to provide sure foreground and sure background for a trimap, either of the two is sufficient. However, performance may vary when specifying just one of them.
 
 * Using a **fourmap** (0 = sure background, 64 = probably background, 128 = probably foreground, 255 = sure foreground) as a scribble:
 
