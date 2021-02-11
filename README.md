@@ -179,12 +179,12 @@ Minimal code snippets using the library
 
   # Read image and trimap
   im = cv2.imread(image_path)
-  im_rgba = cv2.cvtColor(im, cv2.COLOR_BGR2BGRA)
+  im_bgra = cv2.cvtColor(im, cv2.COLOR_BGR2BGRA)
   trimap = cv2.imread(trimap_path, cv2.IMREAD_GRAYSCALE)
 
   # Perform segmentation
   gc = grabcut.GrabCut(max_iter)
-  segmentation = gc.estimateSegmentationFromTrimap(im_rgba, trimap, gamma)
+  segmentation = gc.estimateSegmentationFromTrimap(im_bgra, trimap, gamma)
 
   # Save segmentation
   cv2.imwrite(output_path, segmentation)
