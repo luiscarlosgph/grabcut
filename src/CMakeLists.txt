@@ -8,7 +8,7 @@ target_link_libraries(grabcut
 )
 
 # Grabcut binary
-cuda_add_executable(MainGrabcut main_grabcut.cpp) 
+cuda_add_executable(main_grabcut main_grabcut.cpp) 
 target_link_libraries(MainGrabcut 
   grabcut
   ${Python3_LIBRARIES}
