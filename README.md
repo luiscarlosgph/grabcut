@@ -76,8 +76,32 @@ $ sudo make install
 Run GrabCut on an image
 -----------------------
 This commands are supposed to be executed from the root of the repository.
-* Using a **rect** as a scribble:
-TODO
+* Using a **rect** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
+
+```bash
+# Python
+$ python3 src/main_grabcut.py --image data/tool_512x409.png --rect data/rect_512x409.png --output data/output_512x409_rect_iter_5_gamma_10.png --iter 5 --gamma 10.0
+
+# C++
+$ build/bin/main_grabcut --image data/tool_512x409.png --rect data/rect_512x409.png --output data/output_512x409_rect_iter_5_gamma_10.png --iter 5 --gamma 10.0
+```
+
+<table align="center">
+  <tr>
+    <td align="center">Image</td> <td align="center">Rect</td> <td align="center">Output</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/tool_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/rect_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_rect_iter_5_gamma_10.png?raw=true" width=205>
+    </td>
+  </tr>
+</table>
 
 * Using a **trimap** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
 
