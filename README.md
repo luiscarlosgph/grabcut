@@ -27,7 +27,7 @@ This code has been tested under the following configuration:
       $ sudo apt install python3-pip
       $ python3 -m pip install numpy --user
 
-* [libpbcvt](https://github.com/luiscarlosgph/pyboostcvconverter)
+* [libpbcvt](https://github.com/luiscarlosgph/pyboostcvconverter): the [README](https://github.com/luiscarlosgph/pyboostcvconverter/blob/main/README.md) of the [libpbcvt](https://github.com/luiscarlosgph/pyboostcvconverter) repository explains how to compile and install this library.
 
 <!--
 * libboost_python >= 1.70.0 (last tested to be working 1.75.0)
