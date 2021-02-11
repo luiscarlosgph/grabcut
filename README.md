@@ -242,7 +242,7 @@ before you call ```cmake```. As you will see this error after you run ```cmake``
 
 Coding style
 --------------
-Please follow these guidelines when editing the code.  
+Please follow these guidelines when doing pull requests.
 C++: https://google.github.io/styleguide/cppguide.html  
 Python: https://www.python.org/dev/peps/pep-0008
 
