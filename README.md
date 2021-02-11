@@ -136,7 +136,7 @@ Solution: choose your compiler
 export CC=/usr/bin/gcc-8
 export CXX=/usr/bin/g++-8
 ```
-before you call ```cmake```. That is, if you have this error, you need to execute the two lines above, delete all the contents of the ```build``` folder and call ```cmake``` and then ```make``` again.
+before you call ```cmake```. As you will see this error after you run ```cmake```, you need to run the two lines above, delete all the contents of the ```build``` folder and call ```cmake``` and ```make``` again.
 
 Coding style
 --------------
