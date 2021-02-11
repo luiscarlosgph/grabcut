@@ -113,6 +113,17 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x
       <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_trimap_v2_iter_5_gamma_10.png?raw=true" width=205>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/tool_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_v3_512x409.png?raw=true" width=205>
+    </td>
+    <td align="center">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/output_512x409_trimap_v3_iter_5_gamma_10.png?raw=true" width=205>
+    </td>
+  </tr>
 </table>
 
 It is not mandatory to provide sure foreground and sure background for a trimap. Either of the two is sufficient (e.g. sure foreground in the example above).
