@@ -136,6 +136,7 @@ It is not mandatory to provide sure foreground and sure background for a trimap,
 ```bash
 # Python
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output data/output_512x409_fourmap_iter_5_gamma_10.png --iter 5 --gamma 10.0
+# Time elapsed in GrabCut segmentation: 164ms
 
 # C++
 $ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output data/output_512x409_fourmap_iter_5_gamma_10.png --iter 5 --gamma 10.0
