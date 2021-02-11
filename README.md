@@ -155,6 +155,8 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_51
   </tr>
 </table>
 
+As for the trimap, not all the labels must be specified in a fourmap. However, at least a foreground (probable or sure) and a background (probable or sure) must be specified.
+
 Exemplary code snippets
 -----------------------
 TODO
