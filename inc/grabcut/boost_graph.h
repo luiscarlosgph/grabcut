@@ -13,7 +13,7 @@
 #include <boost/graph/graph_traits.hpp>
 
 // My imports
-#include <graph.h>
+#include <grabcut/graph.h>
 
 // Boost typedefs
 typedef boost::adjacency_list_traits<boost::vecS, boost::vecS, boost::directedS> traits_t;

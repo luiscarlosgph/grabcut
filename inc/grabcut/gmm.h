@@ -10,9 +10,9 @@
 #define GMM_H
 
 // My includes
-#include <helper_cuda.h>
-#include <helper_string.h>
-#include <util.h>
+#include <grabcut/helper_cuda.h>
+#include <grabcut/helper_string.h>
+#include <grabcut/util.h>
 
 // Declaration of GMM related functions (implemented in gmm.cu)
 cudaError_t GMMAssign(int gmm_N, const float *gmm, int gmm_pitch, const uchar4 *image,

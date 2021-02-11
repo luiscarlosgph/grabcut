@@ -55,7 +55,7 @@
 #define OPENCV_GRAPH_H
 
 // My imports
-#include <graph.h>
+#include <grabcut/graph.h>
 
 template <class TWeight>
 class GCGraph {

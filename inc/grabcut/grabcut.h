@@ -29,9 +29,9 @@
 #endif
 
 // My includes
-#include <boost_graph.h>
-#include <gmm.h>
-#include <opencv_graph.h>
+#include <grabcut/boost_graph.h>
+#include <grabcut/gmm.h>
+#include <grabcut/opencv_graph.h>
 
 // Declaration of border matting (implemented in util.cu)
 cudaError_t applyMatte(int mode, uchar4 *result, int resultPitch, const uchar4 *image,
