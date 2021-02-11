@@ -85,7 +85,11 @@ int main(int argc, char **argv) {
 
     // Grabcut segmentation
     GrabCut grabcut(maxIter);
+    auto start = std::chrono::high_resolution_clock::now();
     result = grabcut.estimateSegmentationFromRect(bgra, rect);
+    auto end = std::chrono::high_resolution_clock::now();
+    std::cout << "Time elapsed in GrabCut segmentation: " << (end - start).count() << "s\n";
+    
   } else if (!CommandLineReader::getInstance().getTrimapFilePath().empty()) {
     // We expect the input image in this format:
     //
@@ -98,7 +102,10 @@ int main(int argc, char **argv) {
 
     // Grabcut segmentation
     GrabCut grabcut(maxIter);
+    auto start = std::chrono::high_resolution_clock::now();
     result = grabcut.estimateSegmentationFromTrimap(bgra, trimap);
+    auto end = std::chrono::high_resolution_clock::now();
+    std::cout << "Time elapsed in GrabCut segmentation: " << (end - start).count() << "s\n";
   } else if (!CommandLineReader::getInstance().getFourmapFilePath().empty()) {
     // We expect the input image in this format:
     //
@@ -112,7 +119,10 @@ int main(int argc, char **argv) {
 
     // Grabcut segmentation
     GrabCut grabcut(maxIter);
+    auto start = std::chrono::high_resolution_clock::now();
     result = grabcut.estimateSegmentationFromFourmap(bgra, fourmap); 
+    auto end = std::chrono::high_resolution_clock::now();
+    std::cout << "Time elapsed in GrabCut segmentation: " << (end - start).count() << "s\n";
   } else if (!CommandLineReader::getInstance().getFgMapFilePath().empty()) {
     // Load background probability map
     cv::Mat bgMap =
