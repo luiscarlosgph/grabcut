@@ -25,10 +25,6 @@ find_package(OpenCV REQUIRED)
 # libpbcvt.so
 find_library(Pbcvt libpbcvt.so)
 
-################################
-# Setup building-related flags #
-################################
-
 include_directories(
   inc 
   pyboostcvconverter/include 
@@ -36,6 +32,10 @@ include_directories(
   ${Python3_INCLUDE_DIRS}
   ${Python3_NumPy_INCLUDE_DIRS}
 )
+
+################
+# Make targets #
+################
 
 add_executable(minimal_trimap minimal_trimap.cpp) 
 target_link_libraries(minimal_trimap
