@@ -1,4 +1,5 @@
-# Description
+GrabCut
+-------
 Implementation of GrabCut with CUDA-based Gaussian Mixture Models. Works in C++ and Python. Run the following steps to get it working.
 This code has been tested under the following configuration:
 * Ubuntu 20.10
@@ -6,7 +7,7 @@ This code has been tested under the following configuration:
 * CMake 3.16.3
 * Python 3.8.6
 
-# Dependencies
+# Install dependencies
 * Python >= 3.8.2
 * [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
