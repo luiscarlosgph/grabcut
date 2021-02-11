@@ -56,7 +56,7 @@ class CommandLineReader {
     cxxopts::Options options(programName, kUsageMsg);
 
     options.add_options()("h,help", "Prints this help message.")(
-        "i,input", "Path to the input file.", cxxopts::value<std::string>())(
+        "i,image", "Path to the input file.", cxxopts::value<std::string>())(
         "o,output", "Path to the output file.", cxxopts::value<std::string>())(
         "r,rect", "Black image with only one white rectangle in the area of interest.",
         cxxopts::value<std::string>())(
@@ -83,8 +83,8 @@ class CommandLineReader {
     }
 
     // Mandatory parameters
-    if (result.count("input")) {
-      m_inputPath = result["input"].as<std::string>();
+    if (result.count("image")) {
+      m_inputPath = result["image"].as<std::string>();
     } else {
       std::cerr << "An --input image file is needed." << std::endl;
       return false;
