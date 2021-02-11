@@ -27,46 +27,42 @@ This code has been tested under the following configuration:
       $ sudo apt install python3-pip
       $ python3 -m pip install numpy --user
 
-* libboost_python >= 1.70.0 (last tested to be working 1.75.0)
+* [libpbcvt](https://github.com/luiscarlosgph/pyboostcvconverter)
+
 <!--
+* libboost_python >= 1.70.0 (last tested to be working 1.75.0)
       # Ubuntu/Debian
       $ sudo apt-get install libboost-all-dev
 # Quick guide to install libboost_python
 If do not want to install Boost from the official Ubuntu/Debian repositories as shown above, 
 you may install a particular version from source as follows:
 -->
+
+<!--
 ```bash
 $ wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
 $ tar xf boost_1_75_0.tar.gz
 $ cd boost_1_75_0/
 $ ./bootstrap.sh --with-python=/usr/bin/python3
+-->
 
+<!--
 # If you want to install the Python libboost library **only**
 $ ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release install
 ```
+-->
+
 <!--
 # If you want to install **all** the libboost libraries
 $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
-# Installing GrabCut from this repository
+# Compile and install GrabCut from source
 ```
-# Clone this repo
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
-
-# Clone and install pyboostcvconverter
-$ git submodule update --init
-$ cd pyboostcvconverter
-$ mkdir build
-$ cd build
-$ cmake -DBUILD_TEST_PROJECT=ON ..
-$ make
-
-# Compile GrabCut
-$ cd ../..
 $ mkdir build
 $ cd build
 $ cmake -DCMAKE_BUILD_TYPE=Release ..
@@ -114,7 +110,7 @@ Solution: try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** 
 
 4. #error -- unsupported GNU version! gcc versions later than 8 are not supported!
 
-Solution: run this
+Solution: choose your compiler running
 ```bash
 export CC=/usr/bin/gcc-8
 export CXX=/usr/bin/g++-8
@@ -130,4 +126,4 @@ Python: https://www.python.org/dev/peps/pep-0008
 Please comment the C++ code using the Doxygen Javadoc style: http://www.doxygen.nl/manual/docblocks.html
 
 # License
-See the [LICENSE](https://github.com/luiscarlosgph/grabcut/blob/main/LICENSE) file.
+This project is distributed under an MIT license. See the [LICENSE](https://github.com/luiscarlosgph/grabcut/blob/main/LICENSE) file.
