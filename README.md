@@ -131,12 +131,12 @@ Solution: try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** 
 
 4. #error -- unsupported GNU version! gcc versions later than 8 are not supported!
 
-Solution: choose your compiler running
+Solution: choose your compiler
 ```bash
 export CC=/usr/bin/gcc-8
 export CXX=/usr/bin/g++-8
 ```
-before you call ```cmake```. As you are seeing this error, you need to delete all the contents of the ```build``` folder before calling ```cmake``` again.
+before you call ```cmake```. That is, if you have this error, you need to execute the two lines above, delete all the contents of the ```build``` folder and call ```cmake``` and then ```make``` again.
 
 Coding style
 --------------
