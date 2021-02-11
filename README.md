@@ -110,15 +110,15 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x
 
 ```bash
 # Python
-$ python3 src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
+$ python3 src/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output data/output_512x409_fourmap_iter_5_gamma_10.png --iter 5 --gamma 10.0
 
 # C++
-$ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
+$ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output data/output_512x409_fourmap_iter_5_gamma_10.png --iter 5 --gamma 10.0
 ```
 
 <table align="center">
   <tr>
-    <td align="center">Image</td> <td align="center">Trimap</td> <td align="center">Output</td>
+    <td align="center">Image</td> <td align="center">Fourmap</td> <td align="center">Output</td>
   </tr>
   <tr>
     <td align="center">
