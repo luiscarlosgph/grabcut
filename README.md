@@ -165,7 +165,7 @@ Minimal code snippets using the library
 ---------------------------------------
 * Python:
 
-  * Trimap: [minimal_trimap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/minimal_trimap_snippet.py)
+  * Trimap: [minimal_trimap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/minimal_trimap.py)
   
   ```python
   import cv2
@@ -190,7 +190,7 @@ Minimal code snippets using the library
   cv2.imwrite(output_path, segmentation)
   ```
   
-  * Fourmap: [minimal_fourmap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/minimal_fourmap_snippet.py)
+  * Fourmap: [minimal_fourmap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/minimal_fourmap.py)
 
 * C++:
   
