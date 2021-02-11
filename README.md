@@ -82,8 +82,10 @@ TODO
 * Using a **trimap** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
 <table align="center">
   <tr>
+    <td align="center">Image</td> <td align="center">Trimap</td> <td align="center">Output</td>
+  </tr>
+  <tr>
     <td align="center">
-      Trimap
       <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_512x409.png?raw=true">
     </td>
   </tr>
