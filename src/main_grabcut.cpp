@@ -26,7 +26,7 @@
 
 // My includes
 #include <cmdlinereader.h>
-#include <grabcut.h>
+#include <grabcut/grabcut.h>
 
 int main(int argc, char **argv) {
   // Parse command line
