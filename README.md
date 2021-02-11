@@ -87,7 +87,10 @@ $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap
 # C++
 $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
-![trimap](https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_512x409.png?raw=true)
+Trimap
+```
+<img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_512x409.png?raw=true" width="205">
+```
 
 * Using a **fourmap** (0 = sure background, 64 = probably background, 128 = probably foreground, 255 = sure foreground) as a scribble:
 ```bash
