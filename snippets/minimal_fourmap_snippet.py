@@ -16,12 +16,12 @@ gamma = 10.
 
 # Read image and trimap
 im = cv2.imread(image_path)
-im_rgba = cv2.cvtColor(im, cv2.COLOR_BGR2BGRA)
+im_bgra = cv2.cvtColor(im, cv2.COLOR_BGR2BGRA)
 fourmap = cv2.imread(fourmap_path, cv2.IMREAD_GRAYSCALE)
 
 # Perform segmentation
 gc = grabcut.GrabCut(max_iter)
-segmentation = gc.estimateSegmentationFromFourmap(im_rgba, fourmap, gamma)
+segmentation = gc.estimateSegmentationFromFourmap(im_bgra, fourmap, gamma)
 
 # Save segmentation
 cv2.imwrite(output_path, segmentation)
