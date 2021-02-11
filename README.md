@@ -165,7 +165,13 @@ Minimal code snippets
 ---------------------
 * Python:
 
-      - Trimap: [minimal_trimap_snippet.py](https://github.com/luiscarlosgph/grabcut/blob/main/snippets/minimal_trimap_snippet.py)
+  * Trimap: [minimal_trimap_snippet.py](https://github.com/luiscarlosgph/grabcut/blob/main/snippets/minimal_trimap_snippet.py)
+  * Fourmap: [minimal_fourmap_snippet.py](https://github.com/luiscarlosgph/grabcut/blob/main/snippets/minimal_fourmap_snippet.py)
+
+* C++:
+  
+  * Trimap: TODO
+  * Fourmap: TODO
 
 Common errors when installing from source
 -----------------------------------------
