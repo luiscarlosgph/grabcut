@@ -17,7 +17,7 @@
 
 // CUDA
 #include <cuda_runtime.h>
-#include <npp.h>
+// #include <npp.h>
 
 // OpenCV
 #include <opencv2/core/core.hpp>

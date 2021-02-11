@@ -123,7 +123,7 @@ class CommandLineReader {
   std::string m_fourmapPath = "";
   std::string m_fgMapPath = "";
   std::string m_bgMapPath = "";
-  int m_iter = -1;
+  unsigned int m_iter = 0;
   double m_gamma = -1;
 };
 

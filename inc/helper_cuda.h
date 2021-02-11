@@ -7,11 +7,12 @@
  * this software and related documentation outside the terms of the EULA
  * is strictly prohibited.
  *
+ * This code has been modified by:
+ * @author Luis C. Garcia Peraza Herrera (luiscarlos.gph@gmail.com).
+ * @date   11 Feb 2021.
  */
 
-////////////////////////////////////////////////////////////////////////////////
 // These are CUDA Helper functions for initialization and error checking
-
 #ifndef HELPER_CUDA_H
 #define HELPER_CUDA_H
 
@@ -208,7 +209,7 @@ static const char *_cudaGetErrorEnum(cudaError_t error) {
     case cudaErrorProfilerAlreadyStopped:
       return "cudaErrorProfilerAlreadyStopped";
 
-    /* Since CUDA 4.0*/
+    // Since CUDA 4.0
     case cudaErrorAssert:
       return "cudaErrorAssert";
 
@@ -221,7 +222,7 @@ static const char *_cudaGetErrorEnum(cudaError_t error) {
     case cudaErrorHostMemoryNotRegistered:
       return "cudaErrorHostMemoryNotRegistered";
 
-    /* Since CUDA 5.0 */
+    // Since CUDA 5.0 
     case cudaErrorOperatingSystem:
       return "cudaErrorOperatingSystem";
 
@@ -249,7 +250,7 @@ static const char *_cudaGetErrorEnum(cudaError_t error) {
     case cudaErrorNotSupported:
       return "cudaErrorNotSupported";
 
-    /* Since CUDA 6.0 */
+    // Since CUDA 6.0
     case cudaErrorHardwareStackError:
       return "cudaErrorHardwareStackError";
 
@@ -268,7 +269,7 @@ static const char *_cudaGetErrorEnum(cudaError_t error) {
     case cudaErrorIllegalAddress:
       return "cudaErrorIllegalAddress";
 
-    /* Since CUDA 6.5*/
+    // Since CUDA 6.5
     case cudaErrorInvalidPtx:
       return "cudaErrorInvalidPtx";
 
@@ -281,9 +282,96 @@ static const char *_cudaGetErrorEnum(cudaError_t error) {
     case cudaErrorApiFailureBase:
       return "cudaErrorApiFailureBase";
 
-    /* Since CUDA 8.0*/
+    // Since CUDA 8.0
     case cudaErrorNvlinkUncorrectable:
       return "cudaErrorNvlinkUncorrectable";
+
+    case cudaErrorDeviceUninitialized: 
+      return "cudaErrorDeviceUninitialized";
+    
+    case cudaErrorArrayIsMapped:
+      return "cudaErrorArrayIsMapped";
+    
+    case cudaErrorAlreadyMapped:
+      return "cudaErrorAlreadyMapped";
+
+    case cudaErrorAlreadyAcquired:
+      return "cudaErrorAlreadyAcquired";
+     
+    case cudaErrorNotMapped:
+      return "cudaErrorNotMapped";
+
+    case cudaErrorNotMappedAsArray:
+      return "cudaErrorNotMappedAsArray";
+
+    case cudaErrorNotMappedAsPointer:
+      return "cudaErrorNotMappedAsPointer";
+
+    case cudaErrorJitCompilerNotFound:
+      return "cudaErrorJitCompilerNotFound";
+
+    case cudaErrorInvalidSource:
+      return "cudaErrorInvalidSource";
+
+    case cudaErrorFileNotFound:
+      return "cudaErrorFileNotFound";
+
+    case cudaErrorIllegalState:
+      return "cudaErrorIllegalState";
+
+    case cudaErrorSymbolNotFound:
+      return "cudaErrorSymbolNotFound";
+
+    case cudaErrorLaunchIncompatibleTexturing:
+      return "cudaErrorLaunchIncompatibleTexturing";
+
+    case cudaErrorContextIsDestroyed:
+      return "cudaErrorContextIsDestroyed";
+
+    case cudaErrorCooperativeLaunchTooLarge:
+      return "cudaErrorCooperativeLaunchTooLarge";
+
+    case cudaErrorSystemNotReady:
+      return "cudaErrorSystemNotReady";
+
+    case cudaErrorSystemDriverMismatch:
+      return "cudaErrorSystemDriverMismatch";
+
+    case cudaErrorCompatNotSupportedOnDevice:
+      return "cudaErrorCompatNotSupportedOnDevice";
+
+    case cudaErrorStreamCaptureInvalidated:
+      return "cudaErrorStreamCaptureInvalidated";
+
+    case cudaErrorStreamCaptureMerge:
+      return "cudaErrorStreamCaptureMerge";
+
+    case cudaErrorStreamCaptureUnmatched:
+      return "cudaErrorStreamCaptureUnmatched";
+
+    case cudaErrorStreamCaptureUnjoined:
+      return "cudaErrorStreamCaptureUnjoined";
+
+    case cudaErrorStreamCaptureIsolation:
+      return "cudaErrorStreamCaptureIsolation";
+
+    case cudaErrorStreamCaptureImplicit:
+      return "cudaErrorStreamCaptureImplicit";
+
+    case cudaErrorCapturedEvent:
+      return "cudaErrorCapturedEvent";
+
+    case cudaErrorStreamCaptureWrongThread:
+      return "cudaErrorStreamCaptureWrongThread";
+
+    case cudaErrorTimeout:
+      return "cudaErrorTimeout";
+
+    case cudaErrorGraphExecUpdateFailure:
+      return "cudaErrorGraphExecUpdateFailure";
+
+    case cudaErrorStreamCaptureUnsupported:
+      return "cudaErrorStreamCaptureUnsupported";
   }
 
   return "<unknown>";

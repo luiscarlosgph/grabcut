@@ -1,38 +1,20 @@
 # Grabcut library
 cuda_add_library(grabcut SHARED grabcut.cpp gmm.cu util.cu)
 target_link_libraries(grabcut
-  #opencv_core 
-  #opencv_highgui
-  #opencv_imgproc 
-  #opencv_imgcodecs 
-  nppc 
   ${Python3_LIBRARIES}
   ${Boost_LIBRARIES}
   ${OpenCV_LIBS}
-  ${CMAKE_SOURCE_DIR}/pyboostcvconverter/build/libstatic_pbcvt.a
-)
-
-# GMM binary
-cuda_add_executable(MainGMM main_gmm.cpp gmm.cu util.cu)
-target_link_libraries(MainGMM 
-  opencv_core 
-  opencv_highgui 
-  opencv_imgproc 
-  opencv_imgcodecs 
-  nppc
+  ${Pbcvt}
 )
 
 # Grabcut binary
-cuda_add_executable(MainGrabcut main_grabcut.cpp gmm.cu util.cu) 
+cuda_add_executable(MainGrabcut main_grabcut.cpp) 
 target_link_libraries(MainGrabcut 
-  opencv_core 
-  opencv_highgui 
-  opencv_imgproc 
-  opencv_imgcodecs 
-  nppc 
-  ${Boost_LIBRARIES}
+  grabcut
   ${Python3_LIBRARIES}
-  ${CMAKE_SOURCE_DIR}/pyboostcvconverter/build/libstatic_pbcvt.a
+  ${Boost_LIBRARIES}
+  ${OpenCV_LIBS}
+  ${Pbcvt}
 )
 
 # Install libgrabcut.so (by default in /usr/local/lib)
