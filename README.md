@@ -86,7 +86,7 @@ TODO
   </tr>
   <tr>
     <td align="center">
-      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_512x409.png?raw=true">
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_512x409.png?raw=true" width=205>
     </td>
   </tr>
 </table>
