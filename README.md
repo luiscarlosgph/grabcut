@@ -80,6 +80,15 @@ This commands are supposed to be executed from the root of the repository.
 TODO
 
 * Using a **trimap** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
+<table align="center">
+  <tr>
+    <td align="center">
+      Trimap
+      <img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_512x409.png?raw=true">
+    </td>
+  </tr>
+</table>
+
 ```bash
 # Python
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
@@ -87,9 +96,7 @@ $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap
 # C++
 $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x409.png --output ~/output_gpu.png --iter 5 --gamma 10.0
 ```
-Trimap
 
-<img src="https://github.com/luiscarlosgph/grabcut/blob/main/data/trimap_512x409.png?raw=true" width="205">
 
 
 * Using a **fourmap** (0 = sure background, 64 = probably background, 128 = probably foreground, 255 = sure foreground) as a scribble:
