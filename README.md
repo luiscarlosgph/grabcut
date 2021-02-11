@@ -115,7 +115,7 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x
   </tr>
 </table>
 
-It is not mandatory to provide sure foreground and sure background for a trimap. Either of the two is sufficient (e.g. sure foreground in the example above) although performance may vary.
+It is not mandatory to provide sure foreground and sure background for a trimap. Either of the two is sufficient (e.g. sure foreground in the example above), but performance may vary depending on image features.
 
 * Using a **fourmap** (0 = sure background, 64 = probably background, 128 = probably foreground, 255 = sure foreground) as a scribble:
 
