@@ -61,8 +61,8 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
-Compile and install
--------------------
+Compile and install from source
+-------------------------------
 ```
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
@@ -195,7 +195,7 @@ After you have compiled and installed the library, you can use it as follows:
 
 * C++:
   
-  * Trimap: [minimal_trimap.cpp](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_trimap.cpp)
+  * Trimap: [minimal_trimap.cpp](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_trimap/minimal_trimap.cpp)
   
   ```cpp
   #include <opencv2/core/core.hpp>
@@ -225,10 +225,10 @@ After you have compiled and installed the library, you can use it as follows:
   }
   ```
   
-  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap.cpp)
+  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap/minimal_fourmap.cpp)
 
-Common errors when installing from source
------------------------------------------
+Common errors while compiling and installing from source
+--------------------------------------------------------
 1. Could NOT find CUDA (missing: CUDA_CUDART_LIBRARY)
 
 Solution: specify cuda directory when compiling GrabCut, e.g.:
