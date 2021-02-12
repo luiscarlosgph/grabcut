@@ -1,8 +1,7 @@
 GrabCut library (libgrabcut.so)
 -------------------------------
-This repository contains a library and sample programs in C++ and Python that use the library. 
-The library implements GrabCut with CUDA-based Gaussian Mixture Models. 
-It works seamlessly in C++ and Python (see minimal code snippets below).
+This repository contains a library (and exemplary programs in C++ and Python that use the library). 
+It implements GrabCut with CUDA-based Gaussian Mixture Models, and works seamlessly in C++ and Python (see minimal code snippets below).
 The code has been tested under the following configuration:
 
 * Ubuntu 20.10
