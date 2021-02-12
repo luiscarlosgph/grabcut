@@ -73,9 +73,9 @@ $ make
 $ sudo make install
 ```
 
-Run GrabCut on a single image using a sample program
-----------------------------------------------------
-These commands are supposed to be executed from the root of the repository.
+Run GrabCut on a single image
+-----------------------------
+The Python script and the C++ program below allow you to run the GrabCut segmentation on an image without coding. These commands are supposed to be executed from the root of the repository. 
 
 * Using a **trimap** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
 
