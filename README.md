@@ -192,13 +192,11 @@ After you have compiled and installed the library, you can use it as follows:
   
   Once you have compiled and installed the library, you can run (from the root of the repository) both snippets doing:
   ```bash
-  $ python3 snippets/python/minimal_fourmap.py
+  $ python3 snippets/python/minimal_trimap.py
   $ python3 snippets/python/minimal_fourmap.py
   ```
 
-* C++:
-  
-  * Trimap: [minimal_trimap.cpp](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_trimap/minimal_trimap.cpp)
+* C++: [minimal_trimap.cpp](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_trimap/minimal_trimap.cpp), [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap/minimal_fourmap.cpp)
   
   ```cpp
   #include <opencv2/core/core.hpp>
@@ -227,8 +225,19 @@ After you have compiled and installed the library, you can use it as follows:
   return 0;
   }
   ```
+  Once you have compiled and installed the library, you can run (from the root of the repository) the snippets doing:
   
-  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap/minimal_fourmap.cpp)
+  ```bash
+  $ # Trimap
+  $ cd snippets/cpp/minimal_trimap
+  $ mkdir build
+  $ cd build
+  $ cmake -DCMAKE_BUILD_TYPE=Release ..
+  $ make
+  $ You need to go back to the root of the repo because -> const std::string imagePath = "data/tool_512x409.png"; (see above)
+  $ cd ../../../..
+  $ ./snippets/cpp/minimal_trimap/build/minimal_trimap
+  ```
 
 Common errors while compiling and installing from source
 --------------------------------------------------------
