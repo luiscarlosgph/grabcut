@@ -286,8 +286,8 @@ static const char *_cudaGetErrorEnum(cudaError_t error) {
     case cudaErrorNvlinkUncorrectable:
       return "cudaErrorNvlinkUncorrectable";
 
-    case cudaErrorDeviceUninitialized: 
-      return "cudaErrorDeviceUninitialized";
+    //case cudaErrorDeviceUninitialized: 
+    //  return "cudaErrorDeviceUninitialized";
     
     case cudaErrorArrayIsMapped:
       return "cudaErrorArrayIsMapped";
@@ -364,11 +364,11 @@ static const char *_cudaGetErrorEnum(cudaError_t error) {
     case cudaErrorStreamCaptureWrongThread:
       return "cudaErrorStreamCaptureWrongThread";
 
-    case cudaErrorTimeout:
-      return "cudaErrorTimeout";
+    //case cudaErrorTimeout:
+    //  return "cudaErrorTimeout";
 
-    case cudaErrorGraphExecUpdateFailure:
-      return "cudaErrorGraphExecUpdateFailure";
+    //case cudaErrorGraphExecUpdateFailure:
+    //  return "cudaErrorGraphExecUpdateFailure";
 
     case cudaErrorStreamCaptureUnsupported:
       return "cudaErrorStreamCaptureUnsupported";
