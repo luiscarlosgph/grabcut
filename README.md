@@ -165,7 +165,7 @@ Minimal code snippets
 ---------------------
 After you have compiled and installed the library, you can use it as follows:
 * Python:
-
+  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
   * Trimap: [minimal_trimap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_trimap.py)
   
   ```python
@@ -191,10 +191,8 @@ After you have compiled and installed the library, you can use it as follows:
   cv2.imwrite(output_path, segmentation)
   ```
   
-  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
-  
+  From the root of the repository you can run both like this
   ```bash
-  # From the root of the repository you can run both like this
   $ python3 snippets/python/minimal_fourmap.py
   $ python3 snippets/python/minimal_fourmap.py
   ```
