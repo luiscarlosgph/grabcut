@@ -196,7 +196,7 @@ After you have compiled and installed the library, you can use it as follows:
   $ python3 snippets/python/minimal_fourmap.py
   ```
 
-* C++: [minimal_trimap.cpp](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_trimap/minimal_trimap.cpp), [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap/minimal_fourmap.cpp)
+* C++: [minimal_trimap.cpp](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_trimap/minimal_trimap.cpp) (see below), [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap/minimal_fourmap.cpp)
   
   ```cpp
   #include <opencv2/core/core.hpp>
