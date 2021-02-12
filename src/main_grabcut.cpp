@@ -99,7 +99,8 @@ int main(int argc, char **argv) {
 
     // Grabcut segmentation
     GrabCut grabcut(maxIter);
-    result = grabcut.estimateSegmentationFromTrimap(bgra, trimap);
+    double gamma = CommandLineReader::getInstance().getGamma();
+    result = grabcut.estimateSegmentationFromTrimap(bgra, trimap, gamma);
   } else if (!CommandLineReader::getInstance().getFourmapFilePath().empty()) {
     // We expect the input image in this format:
     //
@@ -113,7 +114,8 @@ int main(int argc, char **argv) {
 
     // Grabcut segmentation
     GrabCut grabcut(maxIter);
-    result = grabcut.estimateSegmentationFromFourmap(bgra, fourmap); 
+    double gamma = CommandLineReader::getInstance().getGamma();
+    result = grabcut.estimateSegmentationFromFourmap(bgra, fourmap, gamma); 
   } else if (!CommandLineReader::getInstance().getFgMapFilePath().empty()) {
     // Load background probability map
     cv::Mat bgMap =

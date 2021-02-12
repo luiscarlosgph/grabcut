@@ -124,7 +124,7 @@ class CommandLineReader {
   std::string m_fgMapPath = "";
   std::string m_bgMapPath = "";
   unsigned int m_iter = 0;
-  double m_gamma = -1;
+  double m_gamma = 50;
 };
 
 #endif  // COMMAND_LINE_READER_H
