@@ -14,7 +14,10 @@ link_directories("${CUDA_TOOLKIT_ROOT_DIR}/lib64")
 
 # Python libraries
 find_package(Python3 COMPONENTS Interpreter Development NumPy)
-
+include_directories(
+  ${Python3_INCLUDE_DIRS}
+  ${Python3_NumPy_INCLUDE_DIRS}
+)
 # libboost_pythonXX.a
 set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost COMPONENTS python3 REQUIRED)
@@ -25,20 +28,16 @@ find_package(OpenCV REQUIRED)
 # libpbcvt.so
 find_library(Pbcvt libpbcvt.so)
 
-include_directories(
-  inc 
-  pyboostcvconverter/include 
-  ${Boost_INCLUDE_DIRS} 
-  ${Python3_INCLUDE_DIRS}
-  ${Python3_NumPy_INCLUDE_DIRS}
-)
+# libgrabcut.so
+find_library(GrabCut libgrabcut.so)
+
 
 ################
 # Make targets #
 ################
 
-add_executable(minimal_trimap minimal_trimap.cpp) 
-target_link_libraries(minimal_trimap
+cuda_add_executable(minimal_fourmap minimal_fourmap.cpp) 
+target_link_libraries(minimal_fourmap
   grabcut
   ${Python3_LIBRARIES}
   ${Boost_LIBRARIES}

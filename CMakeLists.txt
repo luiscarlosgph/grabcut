@@ -52,8 +52,8 @@ find_library(Pbcvt libpbcvt.so)
 
 include_directories(
   inc 
-  pyboostcvconverter/include 
-  ${Boost_INCLUDE_DIRS} 
+  #pyboostcvconverter/include 
+  #${Boost_INCLUDE_DIRS} 
   ${Python3_INCLUDE_DIRS}
   ${Python3_NumPy_INCLUDE_DIRS}
 )
