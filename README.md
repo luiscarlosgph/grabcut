@@ -30,35 +30,18 @@ Install dependencies
       $ sudo apt update
       $ sudo apt install python3-pip
       $ python3 -m pip install numpy --user
-      
-<!--
-* [libpbcvt](https://github.com/luiscarlosgph/pyboostcvconverter): the [README](https://github.com/luiscarlosgph/pyboostcvconverter/blob/main/README.md) of the [libpbcvt](https://github.com/luiscarlosgph/pyboostcvconverter) repository explains how to compile and install this library.
--->
-<!--
-* libboost_python >= 1.70.0 (last tested to be working 1.75.0)
-      # Ubuntu/Debian
-      $ sudo apt-get install libboost-all-dev
-# Quick guide to install libboost_python
-If do not want to install Boost from the official Ubuntu/Debian repositories as shown above, 
-you may install a particular version from source as follows:
--->
 
-<!--
-```bash
-$ wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
-$ tar xf boost_1_75_0.tar.gz
-$ cd boost_1_75_0/
-$ ./bootstrap.sh --with-python=/usr/bin/python3
--->
+* libboost_python >= 1.70.0 (last tested to be working 1.75.0)
+      
+      $ wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
+      $ tar xf boost_1_75_0.tar.gz
+      $ cd boost_1_75_0/
+      $ ./bootstrap.sh --with-python=/usr/bin/python3
+      $ ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
+      $ sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release install
 
 <!--
 # If you want to install the Python libboost library **only**
-$ ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
-$ sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release install
-```
--->
-
-<!--
 # If you want to install **all** the libboost libraries
 $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
