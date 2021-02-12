@@ -244,25 +244,7 @@ Solution: the compiler cannot find the NumPy headers. Add the locations to CPATH
 $ export CPATH=[YOUR HOME DIRECTORY]/.local/lib/python3.8/site-packages/numpy/core/include:$CPATH
 ```
 
-3. If you find the following error:
-```
-../../pyboostcvconverter/build/libstatic_pbcvt.a(pyboost_cv4_converter.cpp.o): In function `pbcvt::NumpyAllocator::allocate(int, int const*, int, void*, unsigned long*, cv::AccessFlag, cv::UMatUsageFlags) const':
-pyboost_cv4_converter.cpp:(.text._ZNK5pbcvt14NumpyAllocator8allocateEiPKiiPvPmN2cv10AccessFlagENS5_14UMatUsageFlagsE[_ZNK5pbcvt14NumpyAllocator8allocateEiPKiiPvPmN2cv10AccessFlagENS5_14UMatUsageFlagsE]+0x9d): undefined reference to `cv::error(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*, char const*, int)'
-pyboost_cv4_converter.cpp:(.text._ZNK5pbcvt14NumpyAllocator8allocateEiPKiiPvPmN2cv10AccessFlagENS5_14UMatUsageFlagsE[_ZNK5pbcvt14NumpyAllocator8allocateEiPKiiPvPmN2cv10AccessFlagENS5_14UMatUsageFlagsE]+0x2c5): undefined reference to `cv::format[abi:cxx11](char const*, ...)'
-pyboost_cv4_converter.cpp:(.text._ZNK5pbcvt14NumpyAllocator8allocateEiPKiiPvPmN2cv10AccessFlagENS5_14UMatUsageFlagsE[_ZNK5pbcvt14NumpyAllocator8allocateEiPKiiPvPmN2cv10AccessFlagENS5_14UMatUsageFlagsE]+0x2ed): undefined reference to `cv::error(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*, char const*, int)'
-../../pyboostcvconverter/build/libstatic_pbcvt.a(pyboost_cv4_converter.cpp.o):(.data.rel.ro._ZTVN5pbcvt14NumpyAllocatorE[_ZTVN5pbcvt14NumpyAllocatorE]+0x38): undefined reference to `cv::MatAllocator::map(cv::UMatData*, cv::AccessFlag) const'
-collect2: error: ld returned 1 exit status
-src/CMakeFiles/MainGrabcut.dir/build.make:129: recipe for target 'bin/MainGrabcut' failed
-make[2]: *** [bin/MainGrabcut] Error 1
-CMakeFiles/Makefile2:163: recipe for target 'src/CMakeFiles/MainGrabcut.dir/all' failed
-make[1]: *** [src/CMakeFiles/MainGrabcut.dir/all] Error 2
-Makefile:129: recipe for target 'all' failed
-make: *** [all] Error 2
-```
-
-Solution: try installing OpenCV version 3.4.3 or 4.5.1, then recompile **both** pyboostcvconverter and GrabCut.
-
-4. #error -- unsupported GNU version! gcc versions later than 8 are not supported!
+3. #error -- unsupported GNU version! gcc versions later than 8 are not supported!
 
 Solution: choose your compiler
 ```bash
