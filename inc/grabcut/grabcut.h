@@ -11,7 +11,6 @@
 
 #define PY_ARRAY_UNIQUE_SYMBOL pbcvt_ARRAY_API
 #include <boost/python.hpp>
-#include <pyboostcvconverter/pyboostcvconverter.hpp>
 
 // CUDA
 #include <cuda_runtime.h>
@@ -29,9 +28,10 @@
 #endif
 
 // My includes
-#include <grabcut/boost_graph.h>
 #include <grabcut/gmm.h>
+#include <grabcut/boost_graph.h>
 #include <grabcut/opencv_graph.h>
+#include <grabcut/ndcv.h>
 
 // Declaration of border matting (implemented in util.cu)
 cudaError_t applyMatte(int mode, uchar4 *result, int resultPitch, const uchar4 *image,

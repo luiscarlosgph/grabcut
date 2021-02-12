@@ -4,7 +4,6 @@ target_link_libraries(grabcut
   ${Python3_LIBRARIES}
   ${Boost_LIBRARIES}
   ${OpenCV_LIBS}
-  ${Pbcvt}
 )
 
 # Grabcut binary
@@ -14,7 +13,6 @@ target_link_libraries(main_grabcut
   ${Python3_LIBRARIES}
   ${Boost_LIBRARIES}
   ${OpenCV_LIBS}
-  ${Pbcvt}
 )
 
 # Install libgrabcut.so (by default in /usr/local/lib)
