@@ -4,10 +4,10 @@
  * @date    12 Feb 2021.
  *
  * @details The code in this file is based on different parts of the following repository:
- *            https://github.com/Algomorph/pyboostcvconverter
+ *          - https://github.com/Algomorph/pyboostcvconverter
  *          The code in the repository above (pyboostcvconverter) is distributed under an 
  *          MIT license that can be found here:
- *            https://raw.githubusercontent.com/Algomorph/pyboostcvconverter/master/LICENSE
+ *          - https://raw.githubusercontent.com/Algomorph/pyboostcvconverter/master/LICENSE
  */
 
 #ifndef NDARRAY_CV_CONVERTER_H
