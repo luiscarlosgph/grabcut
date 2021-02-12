@@ -228,19 +228,19 @@ After you have compiled and installed the library, you can use it as follows:
   Once you have compiled and installed the library, you can run (from the root of the repository) the snippets doing:
   
   ```bash
-  $ # Trimap
+  $ # Trimap example
   $ cd snippets/cpp/minimal_trimap
   $ mkdir build
   $ cd build
   $ cmake -DCMAKE_BUILD_TYPE=Release ..
   $ make
-  $ You need to go back to the root of the repo because -> const std::string imagePath = "data/tool_512x409.png"; (see above)
+  $ # You now need to go back to the root of the repo because imagePath = "data/tool_512x409.png" (see the snippet above)
   $ cd ../../../..
   $ ./snippets/cpp/minimal_trimap/build/minimal_trimap
   ```
   
   You can strip out the snippet folder (e.g. snippets/cpp/minimal_trimap) and make it your own separate project.
-  Once this library is compiled and installed the snippets are no longer dependent from this repository.
+  Once the library is compiled and installed snippets are no longer dependent on this repository.
 
 Common errors while compiling and installing from source
 --------------------------------------------------------
