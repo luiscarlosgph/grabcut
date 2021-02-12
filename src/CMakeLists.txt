@@ -17,14 +17,7 @@ target_link_libraries(main_grabcut
 
 # Install libgrabcut.so (by default in /usr/local/lib)
 install(TARGETS grabcut LIBRARY DESTINATION lib)
-install(FILES ../inc/grabcut/boost_graph.h DESTINATION include/grabcut)
-install(FILES ../inc/grabcut/gmm.h DESTINATION include/grabcut)
-install(FILES ../inc/grabcut/grabcut.h DESTINATION include/grabcut)
-install(FILES ../inc/grabcut/graph.h DESTINATION include/grabcut)
-install(FILES ../inc/grabcut/helper_cuda.h DESTINATION include/grabcut)
-install(FILES ../inc/grabcut/helper_string.h DESTINATION include/grabcut)
-install(FILES ../inc/grabcut/opencv_graph.h DESTINATION include/grabcut)
-install(FILES ../inc/grabcut/util.h DESTINATION include/grabcut)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/inc/grabcut DESTINATION include FILES_MATCHING PATTERN "*.h")
 
 # Create dynamic link inside the folder of Python packages so that the library can be imported
 install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink 

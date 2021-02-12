@@ -41,9 +41,6 @@ find_package(Boost COMPONENTS python3 REQUIRED)
 # OpenCV
 find_package(OpenCV REQUIRED)
 
-# libpbcvt.so
-#find_library(Pbcvt libpbcvt.so)
-
 
 
 ################################
