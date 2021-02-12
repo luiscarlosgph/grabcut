@@ -166,7 +166,7 @@ Minimal code snippets
 After you have compiled and installed the library, you can use it as follows:
 * Python:
 
-  * Trimap: [minimal_trimap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_trimap.py)
+  * Trimap: [minimal_trimap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_trimap.py)
   
   ```python
   import cv2
@@ -191,11 +191,11 @@ After you have compiled and installed the library, you can use it as follows:
   cv2.imwrite(output_path, segmentation)
   ```
   
-  * Fourmap: [minimal_fourmap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
+  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
 
 * C++:
   
-  * Trimap: 
+  * Trimap: [minimal_trimap.cpp](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_trimap.cpp)
   
   ```cpp
   #include <opencv2/core/core.hpp>
@@ -225,7 +225,7 @@ After you have compiled and installed the library, you can use it as follows:
   }
   ```
   
-  * Fourmap: [minimal_fourmap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap.cpp)
+  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap.cpp)
 
 Common errors when installing from source
 -----------------------------------------
