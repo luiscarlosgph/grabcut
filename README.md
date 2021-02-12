@@ -165,10 +165,11 @@ Minimal code snippets
 ---------------------
 After you have compiled and installed the library, you can use it as follows:
 * Python:
-  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
   * Trimap: [minimal_trimap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_trimap.py)
+  * Fourmap: [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
   
   ```python
+  # This is the code of the trimap snippet
   import cv2
   import grabcut
 
