@@ -285,6 +285,10 @@ export CXX=/usr/bin/g++-8
 ```
 before you call ```cmake```. As you will see this error after you run ```cmake```, you need to run the two lines above, delete all the contents of the ```build``` folder and call ```cmake``` and ```make``` again.
 
+5. ImportError: libpbcvt.so: cannot open shared object file: No such file or directory
+
+Solution: make sure that ```/usr/local/lib``` is in your LD_LIBRARY_PATH: ```export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH```.
+
 Coding style
 --------------
 Please follow these guidelines when doing pull requests.
