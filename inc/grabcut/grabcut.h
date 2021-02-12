@@ -496,22 +496,17 @@ class GrabCut {
 };
 
 // Python wrapper of the class GrabCut
-#if (PY_VERSION_HEX >= 0x03000000)
 static void *init_ar() {
-#else
-static void init_ar() {
-#endif
   Py_Initialize();
   import_array();
-  //return NUMPY_IMPORT_ARRAY_RETVAL;
   return NULL;
 }
 
 BOOST_PYTHON_MODULE(grabcut) {
   // cv::Mat <=> Numpy converter
   init_ar();
-  boost::python::to_python_converter<cv::Mat, pbcvt::matToNDArrayBoostConverter>();
-  pbcvt::matFromNDArrayBoostConverter();
+  boost::python::to_python_converter<cv::Mat, matToNDArrayBoostConverter>();
+  matFromNDArrayBoostConverter();
 
   // GrabCut class wrapper
   boost::python::class_<GrabCut>("GrabCut", boost::python::init<int>())
