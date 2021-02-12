@@ -61,8 +61,8 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
-Compile and install GrabCut from source
----------------------------------------
+Compile and install (program + library)
+-------------------------------
 ```
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
@@ -73,7 +73,7 @@ $ make
 $ sudo make install
 ```
 
-Run GrabCut on a single image
+Run GrabCut on a single image 
 -----------------------------
 These commands are supposed to be executed from the root of the repository.
 
@@ -195,6 +195,35 @@ Minimal code snippets using the library
 * C++:
   
   * Trimap: 
+  
+  ```cpp
+  #include <opencv2/core/core.hpp>
+  #include <grabcut/grabcut.h>
+
+  int main(int argc, char **argv) {
+    const std::string imagePath = "data/tool_512x409.png"; 
+    const std::string trimapPath = "data/trimap_512x409.png";
+    const std::string outputPath = "data/output_512x409_trimap_iter_5_gamma_10.png";
+    int maxIter = 5;
+    float gamma = 10.;
+
+    // Read image and trimap
+    cv::Mat im = cv::imread(imagePath);
+    cv::Mat imBgra;
+    cv::cvtColor(im, imBgra, cv::COLOR_BGR2BGRA);
+    cv::Mat trimap = cv::imread(trimapPath, cv::IMREAD_GRAYSCALE);
+
+    // Perform segmentation
+    GrabCut gc(maxIter);
+    cv::Mat segmentation = gc.estimateSegmentationFromTrimap(imBgra, trimap, gamma);
+
+    // Save segmentation
+    cv::imwrite(outputPath, segmentation);
+
+  return 0;
+  }
+  ```
+  
   * Fourmap: [minimal_fourmap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/cpp/minimal_fourmap.cpp)
 
 Common errors when installing from source
