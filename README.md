@@ -190,7 +190,7 @@ After you have compiled and installed the library, you can use it as follows:
   cv2.imwrite(output_path, segmentation)
   ```
   
-  Once you have compiled and installed the library, you can run both like this (from the root of the repository):
+  Once you have compiled and installed the library, you can run (from the root of the repository) both snippets doing:
   ```bash
   $ python3 snippets/python/minimal_fourmap.py
   $ python3 snippets/python/minimal_fourmap.py
