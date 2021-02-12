@@ -238,6 +238,9 @@ After you have compiled and installed the library, you can use it as follows:
   $ cd ../../../..
   $ ./snippets/cpp/minimal_trimap/build/minimal_trimap
   ```
+  
+  You can strip out the snippet folder (e.g. snippets/cpp/minimal_trimap) and make it your own separate project.
+  Once this library is compiled and installed the snippets are no longer dependent from this repository.
 
 Common errors while compiling and installing from source
 --------------------------------------------------------
