@@ -164,7 +164,7 @@ As for the trimap, not all the labels must be specified in a fourmap. However, a
 Minimal code snippets
 ---------------------
 After you have compiled and installed the library, you can use it as follows:
-* Python: trimap [minimal_trimap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_trimap.py) (see below), fourmap [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
+* Python: [minimal_trimap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_trimap.py) (see below), [minimal_fourmap.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_fourmap.py)
   
   ```python
   # This is the code of the trimap snippet
