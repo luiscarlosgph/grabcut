@@ -1,5 +1,5 @@
-GrabCut
--------
+GrabCut library (libgrabcut.so)
+-------------------------------
 Implementation of GrabCut with CUDA-based Gaussian Mixture Models. Works in C++ and Python. Run the following steps to get it working.
 This code has been tested under the following configuration:
 * Ubuntu 20.10
@@ -61,8 +61,8 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
-Compile and install (program + library)
--------------------------------
+Compile and install
+-------------------
 ```
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
@@ -73,18 +73,18 @@ $ make
 $ sudo make install
 ```
 
-Run GrabCut on a single image 
------------------------------
+Run GrabCut on a single image using a sample program
+----------------------------------------------------
 These commands are supposed to be executed from the root of the repository.
 
 * Using a **trimap** (0 = sure background, 128 = unknown, 255 = sure foreground) as a scribble:
 
 ```bash
-# Python
+# Python script that uses the library (libgrabcut.so)
 $ python3 src/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
 # Time elapsed in GrabCut segmentation: 169 milliseconds
 
-# C++
+# C++ sample program that uses the library (libgrabcut.so)
 $ build/bin/main_grabcut --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
 ```
 
@@ -161,8 +161,9 @@ $ build/bin/main_grabcut --image data/tool_512x409.png --fourmap data/fourmap_51
 
 As for the trimap, not all the labels must be specified in a fourmap. However, at least a foreground pixel (probable or sure) and a background pixel (probable or sure) must be present.
 
-Minimal code snippets using the library
----------------------------------------
+Minimal code snippets
+---------------------
+After you have compiled and installed the library, you can use it as follows:
 * Python:
 
   * Trimap: [minimal_trimap_snippet.py](https://raw.githubusercontent.com/luiscarlosgph/grabcut/main/snippets/python/minimal_trimap.py)
