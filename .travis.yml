@@ -1,8 +1,6 @@
 sudo: true
 language: c++
 dist: focal
-env:
-  - CUDA=10.1.105-1
 addons:
   apt:
     packages:
