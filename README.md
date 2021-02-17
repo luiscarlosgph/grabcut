@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/luiscarlosgph/grabcut.svg?branch=main)](https://travis-ci.org/luiscarlosgph/grabcut)
+
 GrabCut library (libgrabcut.so)
 -------------------------------
 This repository contains a library (and exemplary programs in C++ and Python that use the library). 
