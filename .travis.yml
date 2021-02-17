@@ -1,0 +1,27 @@
+sudo: true
+language: c++
+dist: focal
+addons:
+  apt:
+    packages:
+      - g++-9
+      - cmake
+      - libopencv-dev 
+      - python3-opencv
+      - python3-pip
+      - libboost-all-dev
+      - wget
+      - nvidia-cuda-toolkit
+script:
+  - wget https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
+  - tar xf boost_1_75_0.tar.gz
+  - cd boost_1_75_0
+  - ./bootstrap.sh --with-python=/usr/bin/python3
+  - ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release stage
+  - sudo ./b2 --with-python link=static cxxflags="-std=c++11 -fPIC" variant=release install
+  - cd ..
+  - mkdir -p build
+  - cd build
+  - cmake -DCMAKE_BUILD_TYPE=Release ..
+  - make
+  - sudo make install
