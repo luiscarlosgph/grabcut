@@ -14,6 +14,9 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <string>
 
 // CUDA
 #include <cuda_runtime.h>
@@ -28,17 +31,21 @@
 #include <cmdlinereader.h>
 #include <grabcut/grabcut.h>
 
+inline bool file_exists(const std::string &name) {
+  return access(name.c_str(), F_OK) != -1;
+}
+
 int main(int argc, char **argv) {
   // Parse command line
   if (!CommandLineReader::getInstance().processCmdLineOptions(argc, argv)) return EXIT_FAILURE;
+  const std::string defaultImage = CommandLineReader::getInstance().getInputFilePath();
+  if (!file_exists(defaultImage)) 
+    throw std::invalid_argument("[ERROR] The provided input image path does not exist.");
 
   // Load image
-  const std::string defaultImage = CommandLineReader::getInstance().getInputFilePath();
   cv::Mat image = cv::imread(defaultImage);
-  if (!image.data) {
-    std::cout << "Could not open or find the image" << std::endl;
-    return EXIT_FAILURE;
-  }
+  if (!image.data) 
+    throw std::invalid_argument("[ERROR] Could not read input image.");
 
   // Convert image to BGRA
   cv::Mat bgra;
@@ -141,7 +148,7 @@ int main(int argc, char **argv) {
       result = grabcut.estimateSegmentationFromProba(bgra, probaBg, probaFg);
     }
   } else {
-    throw std::invalid_argument("Must provide either a rect, trimap or fourmap.");
+    throw std::invalid_argument("[ERROR] Must provide either a rect, trimap or fourmap.");
   }
 
   // Save result in output file
