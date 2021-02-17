@@ -1,7 +1,6 @@
 # Grabcut library
 cuda_add_library(grabcut SHARED grabcut.cpp gmm.cu util.cu)
 target_link_libraries(grabcut
-  ${Python3_LIBRARIES}
   ${Boost_LIBRARIES}
   ${OpenCV_LIBS}
 )
