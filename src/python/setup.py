@@ -8,7 +8,7 @@ from setuptools.command.install import install
 #        return True
 
 setup(name='grabcut',
-    version='0.4.0',
+    version='0.5.0',
     description='GrabCut implementation for C++ with Python wrappers.',
     url='https://github.com/luiscarlosgph/grabcut',
     author='Luis C. Garcia-Peraza Herrera',
