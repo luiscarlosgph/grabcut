@@ -52,7 +52,7 @@ $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 
 Install from source
 -------------------
-If you prefer to install this repo with pip, skip this section and follow the next one.
+If you prefer to install this repo with pip, skip this section and continue to the next one.
 ```
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
