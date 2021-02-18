@@ -50,6 +50,18 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
+Install from source
+-------------------------------
+```
+$ git clone https://github.com/luiscarlosgph/grabcut.git
+$ cd grabcut
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+```
+
 Install with pip
 ----------------
 The pip package contains the binary grabcut library, which depends on OpenCV 4.5. It is likely that your Linux distribution comes with a different version of OpenCV, but you can install this version following:
@@ -79,18 +91,6 @@ $ sudo ldconfig
 Then, you can use pip to install the grabcut package:
 ```bash
 $ pip install grabcut --user
-```
-
-Install from source
--------------------------------
-```
-$ git clone https://github.com/luiscarlosgph/grabcut.git
-$ cd grabcut
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_BUILD_TYPE=Release ..
-$ make
-$ sudo make install
 ```
 
 Run GrabCut on a single image
