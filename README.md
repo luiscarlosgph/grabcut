@@ -49,6 +49,18 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
+Install with pip
+----------------
+The pip package depends exclusively on OpenCV 4.5, which you can install from source in Debian/Ubuntu following:
+```bash
+# Install OpenCV dependencies
+$ sudo apt update
+$ sudo apt install build-essential cmake git unzip pkg-config libgtk-3-dev libjpeg-dev libpng-dev libtiff-dev libatlas-base-dev libx264-dev python3-dev libv4l-dev libavcodec-dev libavformat-dev libswscale-dev libxvidcore-dev gfortran openexr libtbb2 libtbb-dev libdc1394-22-dev libopenexr-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
+
+# Download, compile, and install OpenCV
+$ 
+```
+
 Compile and install from source
 -------------------------------
 ```
