@@ -67,7 +67,9 @@ Install with pip
 ----------------
 If you already compiled and installed this repo from source, do not install it again with pip.
 
-The pip package contains a pre-compiled binary grabcut library, which depends on OpenCV 4.5. It is likely that your Linux distribution comes with a different version of OpenCV, but you can install this specific version of OpenCV following:
+The pip package contains a pre-compiled binary grabcut library, which depends on OpenCV 4.5 and numpy 1.20.1. It is likely that your Linux distribution comes with different versions, but you can install them both following:
+
+* OpenCV
 ```bash
 # Install OpenCV dependencies
 $ sudo apt update
@@ -91,6 +93,12 @@ $ make -j8
 $ sudo make install
 $ sudo ldconfig
 ```
+
+* Numpy:
+```bash
+$ python3 -m pip numpy==1.20.1 --user
+```
+
 Then, you can use pip to install the grabcut package:
 ```bash
 $ pip install grabcut --user
