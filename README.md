@@ -51,7 +51,8 @@ $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
 Install from source
--------------------------------
+-------------------
+If you prefer to install this repo with pip, skip this section and follow the next one.
 ```
 $ git clone https://github.com/luiscarlosgph/grabcut.git
 $ cd grabcut
@@ -64,6 +65,8 @@ $ sudo make install
 
 Install with pip
 ----------------
+If you already compiled and installed this repo from source, do not install it again with pip.
+
 The pip package contains the binary grabcut library, which depends on OpenCV 4.5. It is likely that your Linux distribution comes with a different version of OpenCV, but you can install this version following:
 ```bash
 # Install OpenCV dependencies
