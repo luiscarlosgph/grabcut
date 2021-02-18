@@ -55,7 +55,7 @@ The pip package depends exclusively on OpenCV 4.5, which you can install from so
 ```bash
 # Install OpenCV dependencies
 $ sudo apt update
-$ sudo apt install build-essential cmake git unzip pkg-config libgtk-3-dev libjpeg-dev libpng-dev libtiff-dev libatlas-base-dev libx264-dev python3-dev libv4l-dev libavcodec-dev libavformat-dev libswscale-dev libxvidcore-dev gfortran openexr libtbb2 libtbb-dev libdc1394-22-dev libopenexr-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
+$ sudo apt install build-essential cmake git unzip pkg-config libgtk-3-dev libjpeg-dev libpng-dev libtiff-dev libatlas-base-dev libx264-dev python3-dev libv4l-dev libavcodec-dev libavformat-dev libavresample-dev libswscale-dev libxvidcore-dev gfortran openexr libtbb2 libtbb-dev libdc1394-22-dev libopenexr-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
 
 # Download OpenCV
 $ git clone https://github.com/opencv/opencv.git
