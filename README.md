@@ -94,7 +94,7 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-* Numpy:
+* Numpy
 ```bash
 $ python3 -m pip numpy==1.20.1 --user
 ```
