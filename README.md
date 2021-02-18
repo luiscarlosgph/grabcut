@@ -13,7 +13,7 @@ The code has been tested under the following configuration:
 
 Install dependencies
 --------------------
-These dependencies need to be installed no matter if you compile and install this repo from source or using pip.
+These dependencies need to be installed no matter if you install from source or using pip.
 * Python >= 3.8.2
 * [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
