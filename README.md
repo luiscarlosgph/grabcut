@@ -13,6 +13,7 @@ The code has been tested under the following configuration:
 
 Install dependencies
 --------------------
+These dependencies need to be installed no matter if you compile this repo from source or install it using pip.
 * Python >= 3.8.2
 * [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
@@ -49,9 +50,26 @@ $ ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release stage
 $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 -->
 
+Install from source
+-------------------
+If you prefer to install this repo with pip, skip this section and continue to the next one.
+```
+$ git clone https://github.com/luiscarlosgph/grabcut.git
+$ cd grabcut
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+```
+
 Install with pip
 ----------------
-The pip package depends exclusively on OpenCV 4.5. It is likely that your Linux distribution comes with a different version of OpenCV, but you can install this version following:
+If you already compiled and installed this repo from source, do not install it again with pip.
+
+The pip package contains a pre-compiled binary grabcut library, which depends on OpenCV 4.5 and Numpy 1.20.1. It is likely that your Linux distribution comes with different versions, but you can install them both following:
+
+* OpenCV
 ```bash
 # Install OpenCV dependencies
 $ sudo apt update
@@ -76,16 +94,14 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-Install from source
--------------------------------
+* Numpy
+```bash
+$ python3 -m pip numpy==1.20.1 --user
 ```
-$ git clone https://github.com/luiscarlosgph/grabcut.git
-$ cd grabcut
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_BUILD_TYPE=Release ..
-$ make
-$ sudo make install
+
+Then, you can use pip to install the grabcut package:
+```bash
+$ pip install grabcut --user
 ```
 
 Run GrabCut on a single image
