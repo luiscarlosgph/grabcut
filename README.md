@@ -51,7 +51,7 @@ $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 
 Install with pip
 ----------------
-The pip package depends exclusively on OpenCV 4.5, which you can install from source in Debian/Ubuntu following:
+The pip package depends exclusively on OpenCV 4.5. It is likely that your Linux distribution comes with a different version of OpenCV, but you can install this version following:
 ```bash
 # Install OpenCV dependencies
 $ sudo apt update
