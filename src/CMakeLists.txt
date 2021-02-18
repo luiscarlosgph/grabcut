@@ -17,7 +17,7 @@ target_link_libraries(main_grabcut
 # Copy libgrabcut.so to ${CMAKE_SOURCE_DIR}/src/python/grabcut/_grabcut.so so that we can create 
 # and distribute the pip package
 add_custom_command(TARGET grabcut POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:grabcut> ${CMAKE_SOURCE_DIR}/src/python/grabcut/_grabcut.so
+  COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:grabcut> ${CMAKE_SOURCE_DIR}/src/python/grabcut/grabcut.so
 )
 
 # Install libgrabcut.so (by default in /usr/local/lib)
