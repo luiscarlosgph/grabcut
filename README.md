@@ -112,7 +112,7 @@ The Python script and the C++ program below allow you to run the GrabCut segment
 
 ```bash
 # Python script that uses the library (libgrabcut.so)
-$ python3 src/python/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
+$ python3 src/python/examples/main_grabcut.py --image data/tool_512x409.png --trimap data/trimap_512x409.png --output data/output_512x409_trimap_iter_5_gamma_10.png --iter 5 --gamma 10.0
 # Time elapsed in GrabCut segmentation: 169 milliseconds
 
 # C++ sample program that uses the library (libgrabcut.so)
@@ -166,7 +166,7 @@ It is not mandatory to provide sure foreground and sure background for a trimap,
 
 ```bash
 # Python
-$ python3 src/python/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output data/output_512x409_fourmap_iter_5_gamma_10.png --iter 5 --gamma 10.0
+$ python3 src/python/examples/main_grabcut.py --image data/tool_512x409.png --fourmap data/fourmap_512x409.png --output data/output_512x409_fourmap_iter_5_gamma_10.png --iter 5 --gamma 10.0
 # Time elapsed in GrabCut segmentation: 164ms
 
 # C++
