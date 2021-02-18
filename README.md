@@ -13,6 +13,7 @@ The code has been tested under the following configuration:
 
 Install dependencies
 --------------------
+These dependencies need to be installed no matter if you compile and install this repo from source or using pip.
 * Python >= 3.8.2
 * [CUDA](https://developer.nvidia.com/cuda-downloads) >= 8.0 (last tested to be working 11.0.2)
       
@@ -51,7 +52,7 @@ $ sudo ./b2 link=static cxxflags="-std=c++11 -fPIC" variant=release install
 
 Install with pip
 ----------------
-The pip package depends exclusively on OpenCV 4.5. It is likely that your Linux distribution comes with a different version of OpenCV, but you can install this version following:
+The pip package contains the binary grabcut library, which depends on OpenCV 4.5. It is likely that your Linux distribution comes with a different version of OpenCV, but you can install this version following:
 ```bash
 # Install OpenCV dependencies
 $ sudo apt update
@@ -74,6 +75,10 @@ $ make -j8
 # Install OpenCV
 $ sudo make install
 $ sudo ldconfig
+```
+Then, you can use pip to install the grabcut package:
+```bash
+$ pip install grabcut --user
 ```
 
 Install from source
