@@ -96,12 +96,12 @@ $ sudo ldconfig
 
 * Numpy
 ```bash
-$ python3 -m pip numpy==1.20.1 --user
+$ python3 -m pip install numpy==1.20.1 --user
 ```
 
 Then, you can use pip to install the grabcut package:
 ```bash
-$ pip install grabcut --user
+$ python3 -m pip install grabcut --user
 ```
 
 Run GrabCut on a single image
